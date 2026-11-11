@@ -1,0 +1,262 @@
+{
+  "slug": "k7m2qx9v",
+  "type": "Master Services Agreement",
+  "title": "Managed Logistics Services Agreement",
+  "ref": "MSA-2026-0418",
+  "executed": "2026-03-18",
+  "term_start": "2026-04-01",
+  "term_end": "2029-03-31",
+  "status": "In force",
+  "parties": [
+    {
+      "name": "Northwind Retail Pvt Ltd",
+      "role": "customer"
+    },
+    {
+      "name": "Harbour Freight Systems Ltd",
+      "role": "supplier"
+    }
+  ],
+  "brief": "This is the Managed Logistics Services Agreement between Northwind Retail and Harbour Freight Systems, reference M-S-A 2026 0418. It runs for three years from the first of April 2026 and renews itself for twelve months at a time unless somebody gives notice. Here is what matters. You can walk away, but not before the first year is out, and then only on ninety days written notice. If they breach, they get thirty days to fix it. On the way out they owe you sixty days of exit assistance at contract rates. It costs one crore twenty four lakh a year, billed monthly in arrears and payable within forty five days. Rates rise once a year in line with inflation, capped at five per cent. You have committed to eighty per cent of forecast volume, and if you ship less than that you pay for it anyway. Your own obligations are modest but real. A rolling volume forecast by the fifth of each month. A named contract manager. Site access at Bhiwandi and Hosur. And a reply within five working days when they serve a service failure notice. If they let you down, you get service credits worth up to ten per cent of the monthly charge, and those credits are your only remedy for delay. Their overall liability stops at twelve months of fees, except for data breach, intellectual property infringement and fraud, where there is no cap at all. Finally, nothing in this contract changes by email. A variation needs a written change order signed by both contract managers, so a rate agreed in a mail thread is not binding on anyone. The date to watch is the thirty first of December 2028. That is the last day to give notice if you do not want another twelve months.",
+  "headline": [
+    {
+      "q": "Can we get out of it?",
+      "a": "Yes, but not yet. After the first 12 months you can terminate for convenience on <b>90 days' written notice</b>. For breach, 30 days to remedy, then immediate termination. Harbour must provide <b>60 days of exit assistance</b> at the contract rates.",
+      "ref": "cl. 14.2, 14.4, 19.1"
+    },
+    {
+      "q": "What does it cost us?",
+      "a": "<b>₹1.24 crore a year</b>, invoiced monthly in arrears, payable in 45 days. Rates rise annually by CPI capped at <b>+5%</b>. You have committed to <b>80% of forecast volume</b> — shortfall is billed anyway.",
+      "ref": "cl. 7.1, 7.3, sch. 2"
+    },
+    {
+      "q": "What do we have to do, and by when?",
+      "a": "Submit a rolling volume forecast by the <b>5th of each month</b>, name a contract manager, give access to the Bhiwandi and Hosur sites, and respond to service failure notices within 5 business days.",
+      "ref": "cl. 5.2, 6.1, sch. 3"
+    },
+    {
+      "q": "What happens if they fail?",
+      "a": "Service credits up to <b>10% of the monthly charge</b> — and credits are your sole remedy for delay. Overall liability is capped at <b>12 months' fees</b>, but the cap does <b>not</b> apply to data breach, IP infringement or fraud.",
+      "ref": "cl. 11.2, 12.1, 12.3"
+    },
+    {
+      "q": "Who can change it?",
+      "a": "Only a written change order signed by <b>both contract managers</b>. Email agreement is expressly excluded, so a varied rate agreed in a thread is not binding.",
+      "ref": "cl. 20.4"
+    }
+  ],
+  "dates": [
+    {
+      "date": "2026-12-31",
+      "what": "Insurance certificate due from Harbour",
+      "note": "₹10 crore public liability; you must chase it",
+      "ref": "cl. 13.2"
+    },
+    {
+      "date": "2027-01-01",
+      "what": "Annual rate review takes effect",
+      "note": "CPI-linked, capped at +5%",
+      "ref": "cl. 7.3"
+    },
+    {
+      "date": "2028-12-31",
+      "what": "Last day to give notice of non-renewal",
+      "note": "Miss it and the term extends by 12 months",
+      "ref": "cl. 3.2"
+    },
+    {
+      "date": "2029-03-31",
+      "what": "Term ends",
+      "note": "Auto-renews for 12 months unless notice is given",
+      "ref": "cl. 3.1"
+    }
+  ],
+  "qa": [
+    {
+      "q": "Can we assign the agreement to another group company?",
+      "side": "customer",
+      "a": "Yes, to an affiliate, with <b>written notice but no consent needed</b>. Assignment to anyone else needs Harbour's prior written consent, not to be unreasonably withheld. A change of control of Northwind gives Harbour a 60-day termination right.",
+      "ref": "cl. 21.1, 21.3"
+    },
+    {
+      "q": "Can Harbour subcontract its obligations?",
+      "side": "both",
+      "a": "Yes, but it stays fully liable for its subcontractors, and the named critical subcontractors in Schedule 5 cannot be changed without your consent.",
+      "ref": "cl. 4.5, sch. 5"
+    },
+    {
+      "q": "Who owns the data generated by the service?",
+      "side": "both",
+      "a": "Northwind owns all operational and shipment data. Harbour has a licence to use it only to deliver the service, and must return or delete it within 30 days of termination.",
+      "ref": "cl. 16.1, 16.4"
+    },
+    {
+      "q": "Where is the data stored?",
+      "side": "both",
+      "a": "Within India. Transfer outside India needs Northwind's prior written approval and an approved transfer mechanism.",
+      "ref": "cl. 16.6"
+    },
+    {
+      "q": "What notice do we get of a price increase?",
+      "side": "customer",
+      "a": "60 days before each anniversary, with the CPI calculation shown. If Harbour misses the notice, the old rates roll on for that year.",
+      "ref": "cl. 7.3"
+    },
+    {
+      "q": "Can we audit Harbour?",
+      "side": "customer",
+      "a": "Once a year on 15 business days' notice, plus at any time after a material breach. Harbour bears the cost if the audit finds an overcharge above 5%.",
+      "ref": "cl. 17.1, 17.3"
+    },
+    {
+      "q": "What insurance must Harbour carry?",
+      "side": "customer",
+      "a": "₹10 crore public liability, ₹5 crore professional indemnity and goods-in-transit cover at full replacement value. Certificates are due annually on 31 December.",
+      "ref": "cl. 13.1, 13.2"
+    },
+    {
+      "q": "What are the service levels?",
+      "side": "both",
+      "a": "99.2% on-time delivery measured monthly, 99.8% consignment accuracy, and a 4-hour acknowledgement on escalations. Measured on a calendar month, not a rolling window.",
+      "ref": "sch. 1"
+    },
+    {
+      "q": "How are service credits calculated?",
+      "side": "both",
+      "a": "2% of the monthly charge per full percentage point below the on-time target, capped at 10% in any month. Credits are applied to the next invoice, not refunded.",
+      "ref": "cl. 11.2, sch. 1"
+    },
+    {
+      "q": "Is there a minimum volume commitment?",
+      "side": "customer",
+      "a": "Yes — 80% of your rolling forecast. Ship below it and you are invoiced for the shortfall at the contracted rate per consignment.",
+      "ref": "cl. 7.5, sch. 2"
+    },
+    {
+      "q": "What happens if there is a strike or a port closure?",
+      "side": "both",
+      "a": "Force majeure suspends the affected obligations but not payment for services already performed. If it runs beyond 60 days, either side may terminate without liability.",
+      "ref": "cl. 18.1, 18.4"
+    },
+    {
+      "q": "Can Harbour raise prices mid-year for fuel?",
+      "side": "customer",
+      "a": "Only through the fuel surcharge mechanism in Schedule 2, which is formula-driven and tied to a published index. No discretionary mid-year increases.",
+      "ref": "sch. 2, part B"
+    },
+    {
+      "q": "Who handles customs and duties?",
+      "side": "both",
+      "a": "Harbour acts as agent for customs clearance; duties and statutory levies are Northwind's cost. Penalties caused by Harbour's error are Harbour's cost.",
+      "ref": "cl. 8.2, 8.5"
+    },
+    {
+      "q": "What is the dispute process?",
+      "side": "both",
+      "a": "Escalation to contract managers, then to senior executives within 15 business days, then arbitration in Bengaluru under the Arbitration and Conciliation Act, 1996. One arbitrator.",
+      "ref": "cl. 22.1, 22.3"
+    },
+    {
+      "q": "Which law governs?",
+      "side": "both",
+      "a": "Indian law, with the courts at Bengaluru having exclusive jurisdiction for anything outside arbitration.",
+      "ref": "cl. 22.5"
+    },
+    {
+      "q": "Are there exclusivity obligations?",
+      "side": "customer",
+      "a": "No. Northwind may use other logistics providers, but volumes routed elsewhere still count against the 80% minimum commitment.",
+      "ref": "cl. 2.3, cl. 7.5"
+    },
+    {
+      "q": "What survives termination?",
+      "side": "both",
+      "a": "Confidentiality for 5 years, the data return obligation, accrued payment rights, the indemnities and the liability cap. The service levels do not.",
+      "ref": "cl. 19.6"
+    },
+    {
+      "q": "Can we recover lost profits?",
+      "side": "customer",
+      "a": "No. Indirect and consequential loss, including loss of profit, is excluded both ways — except for the uncapped categories.",
+      "ref": "cl. 12.2"
+    },
+    {
+      "q": "What notice must we give to end a statement of work?",
+      "side": "customer",
+      "a": "30 days for an individual SOW, provided the master agreement stays in force. Ending the master agreement ends every SOW with it.",
+      "ref": "cl. 2.5, 14.6"
+    },
+    {
+      "q": "Does the contract renew automatically?",
+      "side": "both",
+      "a": "Yes — successive 12-month terms unless either side gives 90 days' written notice before the end of the then-current term.",
+      "ref": "cl. 3.2"
+    }
+  ],
+  "escalate": {
+    "to": "contracts@northwind.example",
+    "team": "Northwind Legal — Commercial"
+  },
+  "clauses": [
+    {
+      "ref": "cl. 3.1",
+      "heading": "Term",
+      "text": "This Agreement commences on 1 April 2026 and continues for three (3) years unless terminated earlier in accordance with clause 14."
+    },
+    {
+      "ref": "cl. 3.2",
+      "heading": "Renewal",
+      "text": "On expiry the Agreement renews automatically for successive periods of twelve (12) months unless either party gives not less than ninety (90) days' written notice before the end of the then-current term."
+    },
+    {
+      "ref": "cl. 7.5",
+      "heading": "Minimum volume commitment",
+      "text": "The Customer commits to tender not less than eighty per cent (80%) of the volumes set out in its rolling forecast. Any shortfall shall be invoiced at the contracted rate per consignment."
+    },
+    {
+      "ref": "cl. 9.3",
+      "heading": "Hazardous and restricted goods",
+      "text": "The Customer shall not tender hazardous, perishable, temperature-controlled or excise-restricted goods without the Supplier's prior written acceptance and completion of the declarations in Schedule 6."
+    },
+    {
+      "ref": "cl. 10.2",
+      "heading": "Title and risk",
+      "text": "Risk in the goods passes to the Supplier on collection and returns to the Customer on delivery to the nominated consignee or, where delivery is refused, on return to the Customer's premises."
+    },
+    {
+      "ref": "cl. 12.1",
+      "heading": "Limitation of liability",
+      "text": "Each party's total aggregate liability arising out of or in connection with this Agreement shall not exceed the charges paid or payable in the twelve (12) months preceding the event giving rise to the claim."
+    },
+    {
+      "ref": "cl. 12.3",
+      "heading": "Unlimited liability",
+      "text": "Nothing in this Agreement limits liability for death or personal injury caused by negligence, fraud or fraudulent misrepresentation, breach of clause 16 (Data), or infringement of the other party's intellectual property rights."
+    },
+    {
+      "ref": "cl. 15.4",
+      "heading": "Anti-bribery",
+      "text": "Each party shall comply with the Prevention of Corruption Act, 1988 and shall not offer or accept any financial or other advantage intended to induce improper performance. Breach of this clause is a material breach not capable of remedy."
+    },
+    {
+      "ref": "cl. 16.6",
+      "heading": "Data localisation",
+      "text": "All Customer Data shall be stored and processed within India. Transfer outside India requires the Customer's prior written approval and an approved transfer mechanism."
+    },
+    {
+      "ref": "cl. 20.4",
+      "heading": "Variation",
+      "text": "No variation of this Agreement is effective unless made by a written change order signed by the contract manager of each party. For the avoidance of doubt, exchanges of electronic mail shall not constitute a variation."
+    },
+    {
+      "ref": "cl. 21.3",
+      "heading": "Change of control",
+      "text": "If a person acquires control of the Customer, the Supplier may terminate this Agreement on sixty (60) days' written notice given within three (3) months of becoming aware of the change."
+    },
+    {
+      "ref": "cl. 23.1",
+      "heading": "Notices",
+      "text": "Notices shall be in writing and delivered by hand, registered post or courier to the addresses in Schedule 7. Notice by electronic mail is valid only for operational communications and not for termination."
+    }
+  ]
+}

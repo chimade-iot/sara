@@ -1,0 +1,21 @@
+# Virtual environment. Thousands of files, specific to one machine and one
+# Python version, rebuilt from the README in seconds. Never commit.
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# NOTE: docs/ is deliberately NOT ignored. It is the published site - the
+# generated pages, QR codes and audio are what GitHub Pages serves, so they
+# belong in the repo.
