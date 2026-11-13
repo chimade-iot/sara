@@ -187,6 +187,14 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,4.5vw,2.1rem)
 h2{font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;
   text-transform:uppercase;color:var(--ink-2);margin:0}
 .masthead{border-bottom:2px solid var(--ink);padding-bottom:.9rem;margin-bottom:1.3rem}
+.source{display:inline-flex;align-items:center;gap:.4rem;margin-top:.7rem;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;
+  padding:.5rem .8rem;border:1px solid var(--ink);border-radius:3px;
+  color:var(--ink);background:var(--surface);text-decoration:none}
+.source span{text-transform:none;letter-spacing:0;color:var(--ink-3);font-size:.688rem}
+.source:hover{background:var(--ink);color:var(--paper)}
+.source:hover span{color:var(--paper)}
+.source:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .idrow{display:flex;flex-wrap:wrap;gap:.45rem .5rem;align-items:center;margin-top:.5rem}
 .chip{font-family:var(--mono);font-size:.688rem;letter-spacing:.06em;padding:.25rem .5rem;
   border:1px solid var(--rule-2);border-radius:3px;color:var(--ink-2);background:var(--surface)}
@@ -398,7 +406,6 @@ SCRIPT = r"""
       "Contract: " + D.title + " (" + D.ref + ")\n" +
       "Parties: " + D.parties.map(function (p) {
         return p.name + " — " + p.role; }).join("; ") + "\n" +
-      "I am on the " + side + " side.\n" +
       "Summary: " + location.href + "\n";
     location.href = "mailto:" + D.escalate.to +
       "?subject=" + encodeURIComponent(D.ref + " — contract question") +
@@ -433,7 +440,26 @@ def bars() -> str:
     return "".join(f'<i style="height:{n}%"></i>' for n in h)
 
 
-def page(d: dict, product: str, has_audio: bool) -> str:
+def audio_length(mp3: Path) -> str:
+    """' · 1:40' if ffprobe can tell us, otherwise nothing. Never guess."""
+    if not (mp3.exists() and shutil.which("ffprobe")):
+        return ""
+    try:
+        out = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "default=noprint_wrappers=1:nokey=1", str(mp3)],
+            capture_output=True, text=True, timeout=20)
+        secs = int(float(out.stdout.strip()))
+    except Exception:
+        return ""
+    return f" &middot; {secs // 60}:{secs % 60:02d}"
+
+
+PUBLIC_DIR: Path | None = None
+
+
+def page(d: dict, product: str, has_audio: bool,
+         has_pdf: bool = False, pdf_pages: int = 0) -> str:
     chips = [f'<span class="chip live">{esc(d["status"])}</span>']
     for p in d["parties"]:
         chips.append(f'<span class="chip">{esc(p["name"])} &mdash; {esc(p["role"])}</span>')
@@ -450,18 +476,29 @@ def page(d: dict, product: str, has_audio: bool) -> str:
 
     audio = ""
     if has_audio:
+        dur = audio_length(PUBLIC_DIR / "brief.mp3") if PUBLIC_DIR else ""
         audio = f"""
   <div class="audio">
     <button class="playbtn" id="play" type="button" aria-label="Play the spoken brief">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
     </button>
     <div class="meta">
-      <b>Listen &mdash; the whole agreement, spoken</b>
-      <span>For the drive to the meeting. Nothing to install.</span>
+      <b>Listen to the summary{dur}</b>
+      <span>What the agreement does, in plain words. For the drive to the meeting.</span>
     </div>
     <div class="wave" aria-hidden="true">{bars()}</div>
     <audio id="au" src="brief.mp3" preload="none"></audio>
   </div>"""
+
+    # The summary is not the agreement, and a reader who wants the real
+    # thing should not have to ask for it. Linked whenever a source body
+    # exists, because make_pdf.py runs after this and will produce the file.
+    source = ""
+    if has_pdf:
+        source = ('<a class="source" href="contract.pdf" target="_blank" '
+                  'rel="noopener">Open the agreement'
+                  + (f' <span>PDF, {pdf_pages} pages</span>' if pdf_pages
+                     else ' <span>PDF</span>') + "</a>")
 
     diary = "".join(
         '<div class="date"><span class="d">%s</span>'
@@ -494,6 +531,7 @@ def page(d: dict, product: str, has_audio: bool) -> str:
     <span class="eyebrow">{esc(product)} &middot; summary of the contract in your hand</span>
     <h1>{esc(d['title'])}</h1>
     <div class="idrow">{''.join(chips)}</div>
+    {source}
   </header>
 
 {audio}
@@ -645,7 +683,23 @@ def build(src: Path, product: str, audio: bool) -> None:
         has_audio = True
         print("    kept the brief.mp3 already in the folder")
 
-    (out / "index.html").write_text(page(d, product, has_audio), encoding="utf-8")
+    # The PDF is produced by make_pdf.py, which runs after this. Linking on
+    # the presence of a body file rather than the PDF itself keeps the two
+    # scripts order-independent on a first build.
+    global PUBLIC_DIR
+    PUBLIC_DIR = out
+    has_pdf = (out / "contract.pdf").exists() or \
+              src.with_name(src.stem + ".body.json").exists()
+    pdf_pages = 0
+    if (out / "contract.pdf").exists():
+        try:
+            from pypdf import PdfReader
+            pdf_pages = len(PdfReader(str(out / "contract.pdf")).pages)
+        except Exception:
+            pdf_pages = 0
+
+    (out / "index.html").write_text(
+        page(d, product, has_audio, has_pdf, pdf_pages), encoding="utf-8")
     (out / "summary.json").write_text(
         json.dumps(d, indent=2, ensure_ascii=False), encoding="utf-8")
 
