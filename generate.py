@@ -152,23 +152,30 @@ STYLE = """
    the brand is this block and nothing else. The dark-mode block below
    redefines the same names; if you change one, change its pair. */
 :root{
-  --paper:#f5f6f8;--surface:#fff;--surface-2:#eef0f4;
-  --ink:#0b1b2b;--ink-2:#44536a;--ink-3:#7d8ba0;
-  --rule:#dfe3ea;--rule-2:#c6cdd9;
-  --accent:#0a4d8c;--accent-soft:#eaf1f9;
-  --good:#1f6b4a;--good-soft:#e8f2ed;
-  --warn:#8a3a12;--warn-soft:#fbeee6;
+  /* Factor: navy #202E4C, pale blue #E0F3FA, sky #64C3E8, red #B82A39.
+     Sampled from the brand pages, not invented. The pale blue is the page,
+     white is the card - the same figure/ground Factor uses, which is what
+     makes a white card read as a sheet of paper laid on their blue. */
+  --paper:#e0f3fa;--surface:#fff;--surface-2:#f1f9fd;
+  --ink:#202e4c;--ink-2:#4a5878;--ink-3:#7d89a3;
+  --rule:#cbe6f1;--rule-2:#aed6e8;
+  --accent:#64c3e8;--accent-soft:#eef7fc;
+  --good:#205c7a;--good-soft:#dff0f8;
+  /* Red is the one colour Factor uses sparingly, so it is spent only on
+     the thing that should alarm you: a date close enough to act on. */
+  --warn:#b82a39;--warn-soft:#fbedef;
   --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#0a1119;--surface:#101822;--surface-2:#16202c;
-  --ink:#eef2f7;--ink-2:#aebdd0;--ink-3:#7e8da2;
-  --rule:#1e2a38;--rule-2:#2a3747;
-  --accent:#64a9e8;--accent-soft:#0f2133;
-  --good:#5fc49a;--good-soft:#102620;
-  --warn:#eb9a73;--warn-soft:#2a1a12;}}
+  /* Dark mode is Factor's own navy as the card, a deeper navy as the page. */
+  --paper:#16213a;--surface:#202e4c;--surface-2:#27375a;
+  --ink:#eaf4fa;--ink-2:#afc2d8;--ink-3:#8094b0;
+  --rule:#2c3c60;--rule-2:#3a4c74;
+  --accent:#64c3e8;--accent-soft:#1b2c45;
+  --good:#7fd0ec;--good-soft:#17293a;
+  --warn:#f08a96;--warn-soft:#3a1f26;}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
   font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
