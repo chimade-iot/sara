@@ -199,64 +199,494 @@
   },
   "clauses": [
     {
+      "ref": "cl. 1.1",
+      "heading": "Definitions and interpretation",
+      "text": "In this Agreement, “Affiliate” means any entity that directly or indirectly controls, is controlled by, or is under common control with a party; “Charges” means the amounts payable under clause 7 and Schedule 2; “Customer Data” means all data, records and information relating to the Customer's consignments, customers and operations which is created, received or processed by the Supplier in connection with the Services; “Services” means the logistics, warehousing and distribution services described in Schedule 1 and in each SOW; and “SOW” means a statement of work executed under clause 2.5."
+    },
+    {
+      "ref": "cl. 1.2",
+      "heading": "Definitions and interpretation",
+      "text": "Clause headings are for convenience only and do not affect interpretation. References to a statute include that statute as amended or re-enacted from time to time. The words “including” and “in particular” are not words of limitation."
+    },
+    {
+      "ref": "cl. 1.3",
+      "heading": "Definitions and interpretation",
+      "text": "In the event of conflict, the order of precedence is: (a) the executed SOW; (b) the body of this Agreement; (c) the Schedules. No term contained in any purchase order, invoice or other administrative document of either party shall vary this Agreement."
+    },
+    {
+      "ref": "cl. 2.1",
+      "heading": "Appointment and scope",
+      "text": "The Customer appoints the Supplier, and the Supplier accepts the appointment, to provide the Services in accordance with this Agreement."
+    },
+    {
+      "ref": "cl. 2.2",
+      "heading": "Appointment and scope",
+      "text": "The Supplier shall provide the Services with the reasonable skill, care and diligence to be expected of a competent provider of comparable services in India, and in accordance with all applicable laws, licences and permits."
+    },
+    {
+      "ref": "cl. 2.3",
+      "heading": "Appointment and scope",
+      "text": "The appointment is non-exclusive. Nothing in this Agreement prevents the Customer from procuring comparable services from any other provider, provided that volumes routed to any other provider shall nonetheless count towards the minimum commitment in clause 7.5."
+    },
+    {
+      "ref": "cl. 2.4",
+      "heading": "Appointment and scope",
+      "text": "The Supplier shall not be obliged to perform any service not described in this Agreement or in an executed SOW."
+    },
+    {
+      "ref": "cl. 2.5",
+      "heading": "Appointment and scope",
+      "text": "Each engagement shall be documented in a SOW signed by both parties, setting out the scope, locations, service levels, rates and duration. A SOW may be terminated on thirty (30) days' written notice without terminating this Agreement; termination of this Agreement terminates every SOW then in force."
+    },
+    {
       "ref": "cl. 3.1",
       "heading": "Term",
-      "text": "This Agreement commences on 1 April 2026 and continues for three (3) years unless terminated earlier in accordance with clause 14."
+      "text": "This Agreement commences on 1 April 2026 and continues for three (3) years, expiring on 31 March 2029, unless terminated earlier in accordance with clause 14."
     },
     {
       "ref": "cl. 3.2",
-      "heading": "Renewal",
-      "text": "On expiry the Agreement renews automatically for successive periods of twelve (12) months unless either party gives not less than ninety (90) days' written notice before the end of the then-current term."
+      "heading": "Term",
+      "text": "On expiry this Agreement shall renew automatically for successive periods of twelve (12) months unless either party gives the other not less than ninety (90) days' written notice before the end of the then-current term."
+    },
+    {
+      "ref": "cl. 4.1",
+      "heading": "Supplier obligations",
+      "text": "The Supplier shall provide the Services from the facilities listed in Schedule 1 and shall not relocate any facility without thirty (30) days' prior written notice to the Customer."
+    },
+    {
+      "ref": "cl. 4.2",
+      "heading": "Supplier obligations",
+      "text": "The Supplier shall maintain all registrations, licences and approvals required for the performance of the Services, including under the Motor Vehicles Act, 1988 and applicable goods and services tax legislation."
+    },
+    {
+      "ref": "cl. 4.3",
+      "heading": "Supplier obligations",
+      "text": "The Supplier shall ensure that personnel engaged in the Services are adequately trained, supervised and subject to obligations of confidentiality no less protective than those in clause 16."
+    },
+    {
+      "ref": "cl. 4.4",
+      "heading": "Supplier obligations",
+      "text": "The Supplier shall report any loss, damage, pilferage or misdelivery to the Customer within twenty-four (24) hours of becoming aware of it."
+    },
+    {
+      "ref": "cl. 4.5",
+      "heading": "Supplier obligations",
+      "text": "The Supplier may subcontract any part of the Services but shall remain fully liable for the acts and omissions of its subcontractors as if they were its own. The critical subcontractors named in Schedule 5 shall not be substituted or removed without the Customer's prior written consent."
+    },
+    {
+      "ref": "cl. 5.1",
+      "heading": "Customer obligations",
+      "text": "The Customer shall provide the information, access and cooperation reasonably required by the Supplier to perform the Services, as set out in Schedule 3."
+    },
+    {
+      "ref": "cl. 5.2",
+      "heading": "Customer obligations",
+      "text": "The Customer shall deliver a rolling twelve (12) week volume forecast by the fifth (5th) day of each calendar month. The first four weeks of each forecast shall be binding for capacity planning purposes."
+    },
+    {
+      "ref": "cl. 5.3",
+      "heading": "Customer obligations",
+      "text": "The Customer shall ensure that all consignments are accurately described, properly packed and accompanied by the documentation required under clause 8."
+    },
+    {
+      "ref": "cl. 5.4",
+      "heading": "Customer obligations",
+      "text": "The Customer shall respond to any service failure notice issued by the Supplier within five (5) business days, failing which the matters stated in the notice shall be deemed accepted for the purposes of root cause analysis only, and not for the purposes of liability."
+    },
+    {
+      "ref": "cl. 6.1",
+      "heading": "Contract management",
+      "text": "Each party shall nominate a contract manager, who shall be the first point of contact for all matters arising under this Agreement and shall have authority to sign change orders under clause 20.4. Either party may replace its contract manager on written notice."
+    },
+    {
+      "ref": "cl. 6.2",
+      "heading": "Contract management",
+      "text": "The contract managers shall meet at least monthly to review performance against Schedule 1, open service failures, forecast accuracy and any proposed changes."
+    },
+    {
+      "ref": "cl. 7.1",
+      "heading": "Charges and payment",
+      "text": "The Customer shall pay the Charges calculated in accordance with Schedule 2. The indicative annual value of the Services at commencement is ₹1,24,00,000 (Rupees one crore twenty-four lakh). The Supplier shall invoice monthly in arrears and the Customer shall pay each undisputed invoice within forty-five (45) days of receipt."
+    },
+    {
+      "ref": "cl. 7.2",
+      "heading": "Charges and payment",
+      "text": "All Charges are exclusive of goods and services tax, which shall be charged at the applicable rate. Each party shall bear its own taxes on income."
+    },
+    {
+      "ref": "cl. 7.3",
+      "heading": "Charges and payment",
+      "text": "The Charges shall be reviewed annually with effect from each anniversary of the Commencement Date. Any increase shall not exceed the movement in the All India Consumer Price Index over the preceding twelve months, and shall in no event exceed five per cent (5%). The Supplier shall give the Customer sixty (60) days' written notice of any increase, together with its calculation. If the Supplier fails to give that notice, the Charges shall remain unchanged for the following contract year."
+    },
+    {
+      "ref": "cl. 7.4",
+      "heading": "Charges and payment",
+      "text": "The Customer may withhold payment of any invoiced amount which it disputes in good faith, provided it notifies the Supplier of the disputed amount and the grounds within twenty (20) days of receipt of the invoice and pays the undisputed balance when due."
     },
     {
       "ref": "cl. 7.5",
-      "heading": "Minimum volume commitment",
-      "text": "The Customer commits to tender not less than eighty per cent (80%) of the volumes set out in its rolling forecast. Any shortfall shall be invoiced at the contracted rate per consignment."
+      "heading": "Charges and payment",
+      "text": "The Customer commits to tender for carriage not less than eighty per cent (80%) of the volumes set out in its rolling forecast in each contract year. Any shortfall shall be invoiced at the contracted rate per consignment as if the volumes had been tendered."
+    },
+    {
+      "ref": "cl. 7.6",
+      "heading": "Charges and payment",
+      "text": "Interest shall accrue on undisputed sums not paid when due at one per cent (1%) per month or the maximum rate permitted by law, whichever is lower."
+    },
+    {
+      "ref": "cl. 8.1",
+      "heading": "Customs, duties and documentation",
+      "text": "Where the Services include cross-border movement, the Supplier shall prepare and lodge the documentation required for customs clearance."
+    },
+    {
+      "ref": "cl. 8.2",
+      "heading": "Customs, duties and documentation",
+      "text": "The Supplier acts as agent of the Customer for the purposes of customs clearance. All duties, cesses and statutory levies shall be to the Customer's account and shall be recharged at cost without mark-up."
+    },
+    {
+      "ref": "cl. 8.3",
+      "heading": "Customs, duties and documentation",
+      "text": "The Customer shall provide accurate commercial invoices, packing lists and classification information not less than two (2) business days before the scheduled movement."
+    },
+    {
+      "ref": "cl. 8.4",
+      "heading": "Customs, duties and documentation",
+      "text": "Neither party shall make any declaration on behalf of the other which it knows or ought reasonably to know is inaccurate."
+    },
+    {
+      "ref": "cl. 8.5",
+      "heading": "Customs, duties and documentation",
+      "text": "Any penalty, demurrage or detention charge arising from an error or omission of the Supplier or its subcontractors shall be borne by the Supplier and shall not be recharged to the Customer."
+    },
+    {
+      "ref": "cl. 9.1",
+      "heading": "Goods and acceptance for carriage",
+      "text": "The Supplier shall accept for carriage only those categories of goods described in the relevant SOW."
+    },
+    {
+      "ref": "cl. 9.2",
+      "heading": "Goods and acceptance for carriage",
+      "text": "The Supplier may refuse any consignment which is improperly packed, inadequately described or which it reasonably believes it is not licensed to carry."
     },
     {
       "ref": "cl. 9.3",
-      "heading": "Hazardous and restricted goods",
-      "text": "The Customer shall not tender hazardous, perishable, temperature-controlled or excise-restricted goods without the Supplier's prior written acceptance and completion of the declarations in Schedule 6."
+      "heading": "Goods and acceptance for carriage",
+      "text": "The Customer shall not tender hazardous, perishable, temperature-controlled or excise-restricted goods without the Supplier's prior written acceptance and completion of the declarations set out in Schedule 6. The Customer indemnifies the Supplier against any loss arising from a breach of this clause 9.3."
+    },
+    {
+      "ref": "cl. 10.1",
+      "heading": "Title and risk",
+      "text": "Title to the goods shall at all times remain with the Customer or its customers, and nothing in this Agreement confers on the Supplier any interest in them other than a possessory lien for unpaid Charges in respect of the consignment in question."
     },
     {
       "ref": "cl. 10.2",
       "heading": "Title and risk",
-      "text": "Risk in the goods passes to the Supplier on collection and returns to the Customer on delivery to the nominated consignee or, where delivery is refused, on return to the Customer's premises."
+      "text": "Risk in the goods passes to the Supplier on collection and returns to the Customer on delivery to the nominated consignee or, where delivery is refused or cannot be effected, on return of the goods to the Customer's premises."
+    },
+    {
+      "ref": "cl. 11.1",
+      "heading": "Service levels and service credits",
+      "text": "The Supplier shall perform the Services so as to meet or exceed the service levels in Schedule 1, measured by calendar month."
+    },
+    {
+      "ref": "cl. 11.2",
+      "heading": "Service levels and service credits",
+      "text": "Where the Supplier fails to meet the on-time delivery service level in any month, the Customer shall be entitled to a service credit of two per cent (2%) of the Charges for that month for each full percentage point below target, subject to an aggregate cap of ten per cent (10%) of the Charges for that month. Service credits shall be applied against the next invoice and shall not be refundable in cash."
+    },
+    {
+      "ref": "cl. 11.3",
+      "heading": "Service levels and service credits",
+      "text": "The parties agree that the service credits are a genuine pre-estimate of the loss likely to be suffered and are the Customer's sole financial remedy for delay in performance, save where the failure amounts to a material breach entitling the Customer to terminate under clause 14.4."
     },
     {
       "ref": "cl. 12.1",
       "heading": "Limitation of liability",
-      "text": "Each party's total aggregate liability arising out of or in connection with this Agreement shall not exceed the charges paid or payable in the twelve (12) months preceding the event giving rise to the claim."
+      "text": "Subject to clauses 12.2 and 12.3, each party's total aggregate liability arising out of or in connection with this Agreement, whether in contract, tort (including negligence), breach of statutory duty or otherwise, shall not exceed the Charges paid or payable in the twelve (12) months immediately preceding the event giving rise to the claim."
+    },
+    {
+      "ref": "cl. 12.2",
+      "heading": "Limitation of liability",
+      "text": "Neither party shall be liable for any indirect or consequential loss, or for loss of profit, loss of revenue, loss of anticipated savings, loss of business opportunity or damage to goodwill, in each case whether direct or indirect."
     },
     {
       "ref": "cl. 12.3",
-      "heading": "Unlimited liability",
-      "text": "Nothing in this Agreement limits liability for death or personal injury caused by negligence, fraud or fraudulent misrepresentation, breach of clause 16 (Data), or infringement of the other party's intellectual property rights."
+      "heading": "Limitation of liability",
+      "text": "Nothing in this Agreement limits or excludes either party's liability for death or personal injury caused by its negligence, for fraud or fraudulent misrepresentation, for breach of clause 16 (Confidentiality and data), for infringement of the other party's intellectual property rights, or for any liability which cannot lawfully be limited."
+    },
+    {
+      "ref": "cl. 13.1",
+      "heading": "Insurance",
+      "text": "The Supplier shall maintain, with insurers of good repute, public liability insurance of not less than ₹10,00,00,000 (Rupees ten crore) per occurrence, professional indemnity insurance of not less than ₹5,00,00,000 (Rupees five crore) in the aggregate, and goods-in-transit cover at full replacement value."
+    },
+    {
+      "ref": "cl. 13.2",
+      "heading": "Insurance",
+      "text": "The Supplier shall provide certificates of insurance on execution of this Agreement and thereafter annually on or before 31 December in each year, and shall notify the Customer promptly of any cancellation or material reduction in cover."
+    },
+    {
+      "ref": "cl. 14.1",
+      "heading": "Termination",
+      "text": "This clause 14 is without prejudice to any other right or remedy of either party."
+    },
+    {
+      "ref": "cl. 14.2",
+      "heading": "Termination",
+      "text": "After the first twelve (12) months of the Term, either party may terminate this Agreement for convenience by giving ninety (90) days' written notice to the other."
+    },
+    {
+      "ref": "cl. 14.3",
+      "heading": "Termination",
+      "text": "Either party may terminate this Agreement immediately on written notice if the other becomes insolvent, enters liquidation, has a resolution professional or liquidator appointed, or is the subject of an order admitting an application under the Insolvency and Bankruptcy Code, 2016."
+    },
+    {
+      "ref": "cl. 14.4",
+      "heading": "Termination",
+      "text": "Either party may terminate this Agreement immediately on written notice if the other commits a material breach which is capable of remedy and fails to remedy it within thirty (30) days of written notice specifying the breach and requiring its remedy, or commits a material breach which is not capable of remedy."
+    },
+    {
+      "ref": "cl. 14.5",
+      "heading": "Termination",
+      "text": "A breach of clause 15.4 (Anti-bribery) shall be deemed a material breach which is not capable of remedy."
+    },
+    {
+      "ref": "cl. 14.6",
+      "heading": "Termination",
+      "text": "Termination of an individual SOW shall not terminate this Agreement. Termination of this Agreement shall terminate every SOW then in force with effect from the same date."
+    },
+    {
+      "ref": "cl. 15.1",
+      "heading": "Compliance",
+      "text": "Each party shall comply with all applicable laws in the performance of its obligations under this Agreement."
+    },
+    {
+      "ref": "cl. 15.2",
+      "heading": "Compliance",
+      "text": "The Supplier shall comply with the Customer's supplier code of conduct as notified from time to time, provided that no change to that code shall materially increase the Supplier's costs without a corresponding change order under clause 20.4."
+    },
+    {
+      "ref": "cl. 15.3",
+      "heading": "Compliance",
+      "text": "The Supplier shall not employ any person below the age of eighteen (18) years in the performance of the Services and shall comply with applicable labour and workplace safety legislation."
     },
     {
       "ref": "cl. 15.4",
-      "heading": "Anti-bribery",
-      "text": "Each party shall comply with the Prevention of Corruption Act, 1988 and shall not offer or accept any financial or other advantage intended to induce improper performance. Breach of this clause is a material breach not capable of remedy."
+      "heading": "Compliance",
+      "text": "Each party shall comply with the Prevention of Corruption Act, 1988 and all other applicable anti-bribery and anti-corruption laws, and shall not offer, promise, give, request or accept any financial or other advantage intended to induce or reward the improper performance of any function or activity."
+    },
+    {
+      "ref": "cl. 16.1",
+      "heading": "Confidentiality and data",
+      "text": "All Customer Data is and shall remain the property of the Customer. The Supplier is granted a non-exclusive, non-transferable licence to use Customer Data solely to the extent necessary to perform the Services."
+    },
+    {
+      "ref": "cl. 16.2",
+      "heading": "Confidentiality and data",
+      "text": "Each party shall keep confidential all information of the other designated as confidential or which would reasonably be regarded as confidential, and shall not disclose it except to those of its personnel and subcontractors who need to know it for the purposes of this Agreement."
+    },
+    {
+      "ref": "cl. 16.3",
+      "heading": "Confidentiality and data",
+      "text": "The obligations in clause 16.2 do not apply to information which is or becomes public otherwise than by breach, was lawfully in the receiving party's possession before disclosure, or is required to be disclosed by law or by a competent authority."
+    },
+    {
+      "ref": "cl. 16.4",
+      "heading": "Confidentiality and data",
+      "text": "On termination or expiry, the Supplier shall return or, at the Customer's election, securely delete all Customer Data within thirty (30) days and shall certify in writing that it has done so, save for copies required to be retained by law."
+    },
+    {
+      "ref": "cl. 16.5",
+      "heading": "Confidentiality and data",
+      "text": "Where the Supplier processes personal data on behalf of the Customer, it shall do so only on the Customer's documented instructions and in accordance with the Digital Personal Data Protection Act, 2023."
     },
     {
       "ref": "cl. 16.6",
-      "heading": "Data localisation",
-      "text": "All Customer Data shall be stored and processed within India. Transfer outside India requires the Customer's prior written approval and an approved transfer mechanism."
+      "heading": "Confidentiality and data",
+      "text": "All Customer Data shall be stored and processed within India. Any transfer of Customer Data outside India requires the Customer's prior written approval and an approved transfer mechanism."
+    },
+    {
+      "ref": "cl. 16.7",
+      "heading": "Confidentiality and data",
+      "text": "The Supplier shall notify the Customer without undue delay, and in any event within forty-eight (48) hours, of becoming aware of any personal data breach affecting Customer Data."
+    },
+    {
+      "ref": "cl. 17.1",
+      "heading": "Records and audit",
+      "text": "The Supplier shall maintain complete and accurate records relating to the Services and the Charges for the duration of this Agreement and for three (3) years thereafter. The Customer may audit those records once in each contract year on not less than fifteen (15) business days' written notice, and at any time following a material breach."
+    },
+    {
+      "ref": "cl. 17.2",
+      "heading": "Records and audit",
+      "text": "Audits shall be conducted during normal business hours, shall not unreasonably disrupt the Supplier's operations, and shall not extend to the Supplier's confidential pricing information relating to other customers."
+    },
+    {
+      "ref": "cl. 17.3",
+      "heading": "Records and audit",
+      "text": "Each party shall bear its own costs of an audit, save that where an audit discloses an overcharge exceeding five per cent (5%) of the Charges for the period audited, the Supplier shall bear the Customer's reasonable audit costs and shall refund the overcharge within thirty (30) days."
+    },
+    {
+      "ref": "cl. 18.1",
+      "heading": "Force majeure",
+      "text": "Neither party shall be liable for any failure or delay in performing its obligations to the extent caused by an event beyond its reasonable control, including act of God, flood, fire, epidemic, war, civil unrest, strike or industrial action not confined to that party's own workforce, port or road closure, or act of government."
+    },
+    {
+      "ref": "cl. 18.2",
+      "heading": "Force majeure",
+      "text": "The affected party shall notify the other promptly, shall use reasonable endeavours to mitigate, and shall resume performance as soon as reasonably practicable."
+    },
+    {
+      "ref": "cl. 18.3",
+      "heading": "Force majeure",
+      "text": "Force majeure does not relieve the Customer of the obligation to pay for Services properly performed before the event."
+    },
+    {
+      "ref": "cl. 18.4",
+      "heading": "Force majeure",
+      "text": "If a force majeure event continues for more than sixty (60) consecutive days, either party may terminate this Agreement on written notice without liability to the other, save for accrued rights."
+    },
+    {
+      "ref": "cl. 19.1",
+      "heading": "Consequences of termination",
+      "text": "On termination or expiry for any reason, the Supplier shall at the Customer's request provide exit assistance for a period of up to sixty (60) days, including the orderly transfer of Customer Data, inventory and operational know-how to the Customer or an incoming provider. Exit assistance shall be charged at the rates set out in Schedule 2."
+    },
+    {
+      "ref": "cl. 19.2",
+      "heading": "Consequences of termination",
+      "text": "The Supplier shall deliver up all goods and materials belonging to the Customer in its possession."
+    },
+    {
+      "ref": "cl. 19.3",
+      "heading": "Consequences of termination",
+      "text": "The Customer shall pay for all Services properly performed up to the effective date of termination."
+    },
+    {
+      "ref": "cl. 19.4",
+      "heading": "Consequences of termination",
+      "text": "Termination shall not affect any right or remedy which accrued before the effective date."
+    },
+    {
+      "ref": "cl. 19.5",
+      "heading": "Consequences of termination",
+      "text": "The Supplier shall not withhold Customer Data or goods by reason of any disputed sum."
+    },
+    {
+      "ref": "cl. 19.6",
+      "heading": "Consequences of termination",
+      "text": "Clauses 1, 10, 12, 16 (which shall continue for five (5) years), 17, 19, 22 and 23 survive termination or expiry. The service levels in Schedule 1 and the service credit mechanism in clause 11 do not."
+    },
+    {
+      "ref": "cl. 20.1",
+      "heading": "General",
+      "text": "Nothing in this Agreement creates a partnership, joint venture or relationship of employer and employee between the parties."
+    },
+    {
+      "ref": "cl. 20.2",
+      "heading": "General",
+      "text": "This Agreement, together with its Schedules and any executed SOW, constitutes the entire agreement between the parties and supersedes all prior discussions and understandings."
+    },
+    {
+      "ref": "cl. 20.3",
+      "heading": "General",
+      "text": "If any provision is held to be invalid or unenforceable, it shall be severed and the remainder shall continue in full force."
     },
     {
       "ref": "cl. 20.4",
-      "heading": "Variation",
-      "text": "No variation of this Agreement is effective unless made by a written change order signed by the contract manager of each party. For the avoidance of doubt, exchanges of electronic mail shall not constitute a variation."
+      "heading": "General",
+      "text": "No variation of this Agreement shall be effective unless made in writing by a change order signed by the contract manager of each party. For the avoidance of doubt, an exchange of electronic mail shall not constitute a variation, however expressed."
+    },
+    {
+      "ref": "cl. 20.5",
+      "heading": "General",
+      "text": "A failure or delay in exercising any right is not a waiver of it."
+    },
+    {
+      "ref": "cl. 20.6",
+      "heading": "General",
+      "text": "This Agreement may be executed in counterparts, each of which shall be an original."
+    },
+    {
+      "ref": "cl. 21.1",
+      "heading": "Assignment and change of control",
+      "text": "The Customer may assign or novate this Agreement to any of its Affiliates on written notice to the Supplier, and no consent shall be required. Any other assignment or novation by either party requires the other's prior written consent, which shall not be unreasonably withheld or delayed."
+    },
+    {
+      "ref": "cl. 21.2",
+      "heading": "Assignment and change of control",
+      "text": "The Supplier may not assign or charge the benefit of this Agreement by way of security without the Customer's prior written consent."
     },
     {
       "ref": "cl. 21.3",
-      "heading": "Change of control",
-      "text": "If a person acquires control of the Customer, the Supplier may terminate this Agreement on sixty (60) days' written notice given within three (3) months of becoming aware of the change."
+      "heading": "Assignment and change of control",
+      "text": "If any person or group acting in concert acquires control of the Customer, the Supplier may terminate this Agreement on sixty (60) days' written notice given within three (3) months of the Supplier becoming aware of the change."
+    },
+    {
+      "ref": "cl. 22.1",
+      "heading": "Disputes and governing law",
+      "text": "Any dispute shall first be referred to the contract managers, who shall meet within ten (10) business days of referral and attempt in good faith to resolve it."
+    },
+    {
+      "ref": "cl. 22.2",
+      "heading": "Disputes and governing law",
+      "text": "If the contract managers do not resolve the dispute, it shall be escalated to a senior executive of each party."
+    },
+    {
+      "ref": "cl. 22.3",
+      "heading": "Disputes and governing law",
+      "text": "If the dispute is not resolved within fifteen (15) business days of escalation, it shall be referred to and finally resolved by arbitration under the Arbitration and Conciliation Act, 1996 before a sole arbitrator appointed by agreement, the seat and venue of arbitration being Bengaluru and the language English."
+    },
+    {
+      "ref": "cl. 22.4",
+      "heading": "Disputes and governing law",
+      "text": "Nothing in this clause prevents either party from seeking urgent interim relief from a court of competent jurisdiction."
+    },
+    {
+      "ref": "cl. 22.5",
+      "heading": "Disputes and governing law",
+      "text": "This Agreement and any dispute arising out of it are governed by the laws of India, and subject to clause 22.3 the courts at Bengaluru shall have exclusive jurisdiction."
     },
     {
       "ref": "cl. 23.1",
       "heading": "Notices",
-      "text": "Notices shall be in writing and delivered by hand, registered post or courier to the addresses in Schedule 7. Notice by electronic mail is valid only for operational communications and not for termination."
+      "text": "Any notice under this Agreement shall be in writing and delivered by hand, by registered post or by reputable courier to the address of the relevant party set out in Schedule 7. Notice by electronic mail is valid for operational communications only and shall not be effective for the service of a notice of breach, termination or non-renewal."
+    },
+    {
+      "ref": "cl. 23.2",
+      "heading": "Notices",
+      "text": "A notice is deemed received on delivery if by hand, or on the third business day after posting if by registered post or courier."
+    },
+    {
+      "ref": "sch. 1",
+      "heading": "The Services and service levels",
+      "text": "Managed inbound receipt, storage, pick-pack and last-mile distribution from the Supplier's facilities at Bhiwandi (Thane) and Hosur (Krishnagiri).  Service levels, measured by calendar month: on-time delivery 99.2%; consignment accuracy 99.8%; acknowledgement of an escalation within 4 hours during business hours; monthly performance report within 5 business days of month end.  Measurement is on a calendar month basis and not on a rolling window. Consignments delayed by a force majeure event under clause 18 are excluded from the measurement."
+    },
+    {
+      "ref": "sch. 2",
+      "heading": "Charges",
+      "text": "Part A — Rate card. Per-consignment rates by weight band and lane, as set out in the rate card annexed to this Schedule. The indicative annual value at commencement is ₹1,24,00,000. Exit assistance under clause 19.1 is charged at the Part A rates then in force.  Part B — Fuel surcharge. A fuel surcharge applies to each consignment, calculated by reference to the published average retail price of high speed diesel for the preceding calendar month, in accordance with the formula set out in this Part. The surcharge is formula-driven; no discretionary mid-year increase may be applied under this Part.  Part C — Minimum commitment. Shortfall against the minimum commitment in clause 7.5 is invoiced at the applicable Part A rate per consignment."
+    },
+    {
+      "ref": "sch. 3",
+      "heading": "Customer dependencies",
+      "text": "Rolling twelve week volume forecast by the 5th of each month (clause 5.2). Nominated contract manager (clause 6.1). Access to the Customer's premises at Bhiwandi and Hosur during operating hours. Accurate consignment documentation (clause 5.3). Response to service failure notices within 5 business days (clause 5.4)."
+    },
+    {
+      "ref": "sch. 4",
+      "heading": "Implementation and transition",
+      "text": "Transition plan, milestones and acceptance criteria for the initial implementation period of ninety (90) days from the Commencement Date. Transition costs are included in the Charges and are not separately recoverable."
+    },
+    {
+      "ref": "sch. 5",
+      "heading": "Critical subcontractors",
+      "text": "The following are critical subcontractors for the purposes of clause 4.5 and may not be substituted or removed without the Customer's prior written consent: (a) Deccan Line Haul Private Limited — primary trunk movement; (b) Coastal Cold Chain Services Private Limited — temperature-controlled storage; (c) Meridian Last Mile Private Limited — metropolitan last-mile delivery."
+    },
+    {
+      "ref": "sch. 6",
+      "heading": "Restricted goods declarations",
+      "text": "Form of declaration required under clause 9.3 for hazardous, perishable, temperature-controlled and excise-restricted goods, together with the list of goods the Supplier will not accept for carriage in any circumstances."
+    },
+    {
+      "ref": "sch. 7",
+      "heading": "Notice addresses",
+      "text": "For the Customer: The Company Secretary, Northwind Retail Private Limited, 4th Floor, Pinnacle Towers, Residency Road, Bengaluru 560025.  For the Supplier: The Managing Director, Harbour Freight Systems Limited, Unit 11, Trident Logistics Park, Bhiwandi, Thane 421302.  With a copy, in each case, to the contract manager nominated under clause 6.1."
     }
   ]
 }

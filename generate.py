@@ -469,6 +469,14 @@ def page(d: dict, product: str, has_audio: bool) -> str:
     <audio id="au" src="brief.mp3" preload="none"></audio>
   </div>"""
 
+    diary = "".join(
+        '<div class="date"><span class="d">%s</span>'
+        '<span class="w">%s%s</span>'
+        '<span class="countdown ok">&nbsp;</span></div>'
+        % (esc(fmt(x["date"])), esc(x["what"]),
+           f'<small>{esc(x["note"])}</small>' if x.get("note") else "")
+        for x in sorted(d["dates"], key=lambda x: x["date"]))
+
     data = json.dumps({
         "title": d["title"], "ref": d["ref"], "parties": d["parties"],
         "dates": d["dates"], "qa": d["qa"], "clauses": d.get("clauses", []),
@@ -503,7 +511,7 @@ def page(d: dict, product: str, has_audio: bool) -> str:
   </div>
 {audio}
   <div class="sechead"><h2>Dates that matter</h2><span class="eyebrow">counted from today</span></div>
-  <div class="dates" id="dates"></div>
+  <div class="dates" id="dates">{diary}</div>
 
   <div class="sechead"><h2>The five questions</h2><span class="eyebrow">plain language</span></div>
   <div class="qa">{cards}</div>
@@ -605,8 +613,33 @@ COVER = """<!doctype html>
 
 # ---------------------------------------------------------------- build
 
+def load_clauses(src: Path) -> list[dict]:
+    """
+    Flatten the full agreement into {ref, heading, text} for the search
+    fallback. Reading it from the same file the PDF is rendered from means
+    the clause a reader lands on is the clause that is actually printed on
+    the paper in their hand - there is no second, summarised copy to drift.
+    """
+    body = src.with_name(src.stem + ".body.json")
+    if not body.exists():
+        return []
+    b = json.loads(body.read_text(encoding="utf-8"))
+    out = []
+    for c in b["clauses"]:
+        for s in c["subs"]:
+            out.append({"ref": f"cl. {s['n']}", "heading": c["heading"],
+                        "text": s["text"]})
+    for s in b.get("schedules", []):
+        out.append({"ref": f"sch. {s['n']}", "heading": s["heading"],
+                    "text": s["text"].replace("\n", " ")})
+    return out
+
+
 def build(src: Path, product: str, audio: bool) -> None:
     d = json.loads(src.read_text(encoding="utf-8"))
+    full = load_clauses(src)
+    if full:
+        d["clauses"] = full
     out = SITE / d["slug"]
     out.mkdir(parents=True, exist_ok=True)
     print(f"  {src.name}  ->  docs/{d['slug']}/")
@@ -650,7 +683,10 @@ def main() -> None:
     if a.voices:
         sys.exit(list_voices())
 
-    srcs = a.sources or sorted(CONTRACTS.glob("*.json"))
+    # *.body.json holds the full agreement text and is not a record in
+    # its own right - it is loaded by the record beside it.
+    srcs = a.sources or [p for p in sorted(CONTRACTS.glob("*.json"))
+                         if not p.name.endswith(".body.json")]
     if not srcs:
         sys.exit("no contract records found in contracts/")
 
