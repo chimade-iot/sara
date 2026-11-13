@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Lumen Workforce Cloud Subscription Agreement &mdash; contract summary</title>
+<style>
+/* ---- palette -------------------------------------------------------
+   Every colour on the page resolves to one of these tokens, so changing
+   the brand is this block and nothing else. The dark-mode block below
+   redefines the same names; if you change one, change its pair. */
+:root{
+  /* Factor: navy #202E4C, pale blue #E0F3FA, sky #64C3E8, red #B82A39.
+     Sampled from the brand pages, not invented. The pale blue is the page,
+     white is the card - the same figure/ground Factor uses, which is what
+     makes a white card read as a sheet of paper laid on their blue. */
+  --paper:#e0f3fa;--surface:#fff;--surface-2:#f1f9fd;
+  --ink:#202e4c;--ink-2:#4a5878;--ink-3:#7d89a3;
+  --rule:#cbe6f1;--rule-2:#aed6e8;
+  --accent:#64c3e8;--accent-soft:#eef7fc;
+  --good:#205c7a;--good-soft:#dff0f8;
+  /* Red is the one colour Factor uses sparingly, so it is spent only on
+     the thing that should alarm you: a date close enough to act on. */
+  --warn:#b82a39;--warn-soft:#fbedef;
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  /* Dark mode is Factor's own navy as the card, a deeper navy as the page. */
+  --paper:#16213a;--surface:#202e4c;--surface-2:#27375a;
+  --ink:#eaf4fa;--ink-2:#afc2d8;--ink-3:#8094b0;
+  --rule:#2c3c60;--rule-2:#3a4c74;
+  --accent:#64c3e8;--accent-soft:#1b2c45;
+  --good:#7fd0ec;--good-soft:#17293a;
+  --warn:#f08a96;--warn-soft:#3a1f26;}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:52rem;margin:0 auto;padding:1.6rem 1rem 4rem}
+.eyebrow{font-family:var(--mono);font-size:.688rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,4.5vw,2.1rem);
+  line-height:1.15;margin:.35rem 0 .5rem}
+h2{font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-2);margin:0}
+.masthead{border-bottom:2px solid var(--ink);padding-bottom:.9rem;margin-bottom:1.3rem}
+.idrow{display:flex;flex-wrap:wrap;gap:.45rem .5rem;align-items:center;margin-top:.5rem}
+.chip{font-family:var(--mono);font-size:.688rem;letter-spacing:.06em;padding:.25rem .5rem;
+  border:1px solid var(--rule-2);border-radius:3px;color:var(--ink-2);background:var(--surface)}
+.chip.live{border-color:var(--good);color:var(--good);background:var(--good-soft)}
+.chip.ref{color:var(--ink-3)}
+.audio{display:flex;align-items:center;gap:.9rem;background:var(--surface);
+  border:1px solid var(--rule);border-radius:4px;padding:.9rem 1rem;margin-bottom:1.5rem}
+.playbtn{flex:0 0 auto;width:2.9rem;height:2.9rem;border-radius:50%;background:var(--ink);
+  border:0;cursor:pointer;display:grid;place-items:center}
+.playbtn svg{width:1.1rem;height:1.1rem;fill:var(--paper)}
+.audio .meta{flex:1 1 auto;min-width:0}
+.audio .meta b{display:block;font-weight:600;font-size:.938rem}
+.audio .meta span{font-size:.813rem;color:var(--ink-3)}
+.wave{display:flex;gap:2px;align-items:flex-end;height:1.5rem;flex:0 0 auto}
+.wave i{width:3px;background:var(--rule-2);border-radius:1px;display:block}
+.wave.on i{background:var(--accent)}
+.sechead{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  border-bottom:1px solid var(--rule);padding-bottom:.45rem;margin:0 0 .9rem}
+.qa{display:grid;gap:.6rem;margin-bottom:1.6rem}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:4px;
+  padding:.85rem 1rem}
+.card .q{font-family:var(--serif);font-size:1.05rem;margin:0 0 .3rem}
+.card .a{margin:0;color:var(--ink-2);font-size:.938rem}
+.card .a b{color:var(--ink);font-weight:600}
+.cite{display:inline-block;margin-top:.5rem;font-family:var(--mono);font-size:.656rem;
+  letter-spacing:.05em;color:var(--ink-3);border:1px solid var(--rule-2);
+  border-radius:2px;padding:.12rem .4rem}
+.dates{display:grid;gap:0;margin-bottom:1.6rem;background:var(--surface);
+  border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+.date{display:grid;grid-template-columns:6.5rem 1fr auto;gap:.8rem;align-items:center;
+  padding:.7rem 1rem;border-top:1px solid var(--rule)}
+.date:first-child{border-top:0}
+.date .d{font-family:var(--mono);font-size:.75rem;color:var(--ink-2)}
+.date .w{font-size:.938rem}
+.date .w small{display:block;color:var(--ink-3);font-size:.813rem}
+.countdown{font-family:var(--mono);font-size:.688rem;letter-spacing:.05em;
+  padding:.2rem .45rem;border-radius:2px;white-space:nowrap}
+.countdown.soon{background:var(--warn-soft);color:var(--warn)}
+.countdown.past{background:var(--surface-2);color:var(--ink-3);text-decoration:line-through}
+.countdown.ok{background:var(--surface-2);color:var(--ink-3)}
+.askbox{background:var(--surface);border:1px solid var(--rule);border-radius:4px;
+  padding:1rem;margin-bottom:1rem}
+#ask{width:100%;font-family:var(--sans);font-size:.938rem;padding:.6rem .75rem;
+  border:1px solid var(--rule-2);border-radius:3px;background:var(--surface-2);color:var(--ink)}
+#ask:focus{outline:2px solid var(--accent);outline-offset:1px}
+.hint{font-size:.813rem;color:var(--ink-3);margin:.55rem 0 0}
+.results{margin:.9rem 0 0;display:grid;gap:.5rem}
+.res{border-left:2px solid var(--accent);padding:.45rem 0 .45rem .7rem}
+.res .rq{font-weight:600;font-size:.938rem;margin:0}
+.res .ra{margin:.15rem 0 0;color:var(--ink-2);font-size:.938rem}
+.res .ra b{color:var(--ink)}
+.res.text{border-left-color:var(--rule-2)}
+.escalate{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;background:var(--accent-soft);
+  border:1px solid var(--rule-2);border-radius:4px;padding:.9rem 1rem;margin-bottom:.6rem}
+.escalate p{margin:0;flex:1 1 16rem;font-size:.875rem;color:var(--ink-2)}
+.escalate p b{color:var(--ink)}
+.btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.55rem .85rem;border-radius:3px;cursor:pointer;white-space:nowrap;
+  border:1px solid var(--ink);background:var(--ink);color:var(--paper);
+  text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
+.optional{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;border:1px dashed var(--rule-2);
+  border-radius:4px;padding:.8rem 1rem;margin-bottom:1.6rem;opacity:.72}
+.optional p{margin:0;flex:1 1 16rem;font-size:.84rem;color:var(--ink-3)}
+.btn[disabled]{cursor:not-allowed;background:none;color:var(--ink-3);border-color:var(--rule-2)}
+footer{border-top:1px solid var(--rule);padding-top:.9rem;font-size:.813rem;color:var(--ink-3)}
+footer p{margin:.35rem 0}
+footer b{color:var(--ink-2)}
+@media (max-width:34rem){
+  .date{grid-template-columns:1fr;gap:.2rem}
+  .date .countdown{justify-self:start}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <span class="eyebrow">Sāra &middot; summary of the contract in your hand</span>
+    <h1>Lumen Workforce Cloud Subscription Agreement</h1>
+    <div class="idrow"><span class="chip live">In force</span><span class="chip">Trellis Industries Pvt Ltd &mdash; customer</span><span class="chip">Lumen Workforce Analytics Pte Ltd &mdash; supplier</span><span class="chip">1 Jul 2026 &ndash; 30 Jun 2028</span><span class="chip ref">SUB-2026-0712 &middot; executed 12 Jun 2026</span></div>
+  </header>
+
+
+  <div class="audio">
+    <button class="playbtn" id="play" type="button" aria-label="Play the spoken brief">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+    <div class="meta">
+      <b>Listen &mdash; the whole agreement, spoken</b>
+      <span>For the drive to the meeting. Nothing to install.</span>
+    </div>
+    <div class="wave" aria-hidden="true"><i style="height:40%"></i><i style="height:70%"></i><i style="height:95%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:35%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:72%"></i><i style="height:30%"></i><i style="height:60%"></i></div>
+    <audio id="au" src="brief.mp3" preload="none"></audio>
+  </div>
+  <div class="sechead"><h2>Important dates</h2><span class="eyebrow">counted from today</span></div>
+  <div class="dates" id="dates"><div class="date"><span class="d">30 Sep 2026</span><span class="w">SOC 2 Type II report was due from Lumen<small>Annual assurance report under cl. 9.4 — not yet received</small></span><span class="countdown ok">&nbsp;</span></div><div class="date"><span class="d">31 Jan 2027</span><span class="w">Quarterly user true-up statement due<small>Additional named users billed in arrears</small></span><span class="countdown ok">&nbsp;</span></div><div class="date"><span class="d">30 Jun 2027</span><span class="w">First anniversary — fee review may apply<small>Capped at +7%, 60 days&#x27; notice required</small></span><span class="countdown ok">&nbsp;</span></div><div class="date"><span class="d">30 Apr 2028</span><span class="w">Last day to give notice of non-renewal<small>Miss it and the term extends by 12 months</small></span><span class="countdown ok">&nbsp;</span></div><div class="date"><span class="d">30 Jun 2028</span><span class="w">Initial term ends<small>Auto-renews for 12 months unless notice is given</small></span><span class="countdown ok">&nbsp;</span></div></div>
+
+  <div class="sechead"><h2>Commonly asked questions</h2><span class="eyebrow">plain language</span></div>
+  <div class="qa"><div class="card"><p class="q">Can we get out of it?</p><p class="a">Not before <b>30 June 2028</b> &mdash; there is no termination for convenience during the initial term. You may terminate for a material breach Lumen fails to remedy within <b>30 days</b>, or immediately on their insolvency. After the initial term, <b>60 days' notice</b> before any renewal date.</p><span class="cite">cl. 12.1, 12.3, 3.2</span></div><div class="card"><p class="q">What does it cost us?</p><p class="a"><b>₹86,40,000 a year</b> for <b>1,200 named users</b>, invoiced annually in advance and payable within 30 days. Additional users are trued up quarterly at the same per-user rate. At renewal the fee may rise by no more than <b>7%</b>.</p><span class="cite">cl. 6.1, 6.3, 6.5</span></div><div class="card"><p class="q">What do we have to do, and by when?</p><p class="a">Name an administrator, keep the named-user list accurate, ensure your people follow the acceptable use policy &mdash; <b>you are responsible for what your users do</b> &mdash; and pay in advance. Lumen may suspend access if an undisputed invoice is more than 30 days late.</p><span class="cite">cl. 4.2, 4.4, 6.6</span></div><div class="card"><p class="q">What happens if they fail?</p><p class="a"><b>99.5% monthly uptime</b>. Below that you earn service credits up to <b>15% of the monthly fee</b>, and credits are your sole remedy for downtime. Liability is capped at <b>12 months' fees</b>, with no cap for data breach, breach of confidence or IP infringement.</p><span class="cite">cl. 8.2, 11.1, 11.3</span></div><div class="card"><p class="q">Can they change the deal?</p><p class="a">Yes, within limits. Lumen may update the service provided it does not <b>materially degrade</b> it, and may change the standard terms on <b>30 days' notice</b>. If a change materially harms you, you have 30 days to terminate without penalty &mdash; but <b>silence counts as acceptance</b>. Commercial terms change only by a signed order form.</p><span class="cite">cl. 2.4, 17.2, 17.3</span></div></div>
+
+  <div class="sechead"><h2>Ask something else</h2>
+    <span class="eyebrow">20 answers on this page</span></div>
+  <div class="askbox">
+    <input id="ask" type="text" autocomplete="off"
+           placeholder="e.g. can we assign this, who owns the data, what notice for a price rise">
+    <div class="results" id="results"></div>
+    <p class="hint">No prepared answer? The search falls back to the contract text,
+      so you always land on the actual clause.</p>
+  </div>
+
+  <div class="escalate">
+    <p><b>Still not answered?</b></p>
+    <a class="btn" id="escalate" href="#">Ask your legal contact</a>
+  </div>
+
+  <div class="optional">
+    <p><b>Ask Factor<i>AI</i></b> &mdash; where an organisation already has an approved
+      contract assistant, an API enabled assistant can be enabled here.</p>
+    <button class="btn" type="button" disabled>Not configured</button>
+  </div>
+
+  <footer>
+    <p><b>Why you can see this.</b> The summary discloses nothing beyond the contract you are
+      already holding. Access follows the document: deployed inside an organisation this page
+      sits in the same SharePoint or CLM location, under the same permissions.</p>
+    <p><b>Not advice, and not the agreement.</b> Where the two differ the executed contract
+      governs. Illustrative contract &mdash; parties, figures and clause numbers are invented.</p>
+  </footer>
+
+</div>
+<script>window.__CONTRACT__ = {"title": "Lumen Workforce Cloud Subscription Agreement", "ref": "SUB-2026-0712", "parties": [{"name": "Trellis Industries Pvt Ltd", "role": "customer"}, {"name": "Lumen Workforce Analytics Pte Ltd", "role": "supplier"}], "dates": [{"date": "2026-09-30", "what": "SOC 2 Type II report was due from Lumen", "note": "Annual assurance report under cl. 9.4 — not yet received", "ref": "cl. 9.4"}, {"date": "2027-01-31", "what": "Quarterly user true-up statement due", "note": "Additional named users billed in arrears", "ref": "cl. 6.3"}, {"date": "2027-06-30", "what": "First anniversary — fee review may apply", "note": "Capped at +7%, 60 days' notice required", "ref": "cl. 6.5"}, {"date": "2028-04-30", "what": "Last day to give notice of non-renewal", "note": "Miss it and the term extends by 12 months", "ref": "cl. 3.2"}, {"date": "2028-06-30", "what": "Initial term ends", "note": "Auto-renews for 12 months unless notice is given", "ref": "cl. 3.1"}], "qa": [{"q": "Where is our employee data actually hosted?", "side": "both", "a": "In <b>Singapore</b>, in Lumen's primary region, with sub-processing by its Bengaluru engineering team for support. It is <b>not</b> hosted in India. The Data Processing Addendum governs the transfer.", "ref": "cl. 10.2, DPA cl. 6"}, {"q": "Does this comply with Indian data protection law?", "side": "customer", "a": "Lumen warrants that it processes personal data only on your documented instructions and in accordance with the <b>Digital Personal Data Protection Act, 2023</b>. You remain the Data Fiduciary; Lumen is a Data Processor. Cross-border transfer relies on the DPA.", "ref": "cl. 10.1, 10.5"}, {"q": "What happens to our data when we leave?", "side": "customer", "a": "Lumen must make it available for export in a machine-readable format for <b>60 days</b> after termination, then delete it within 30 days and certify deletion. Export during that window is free.", "ref": "cl. 13.2, 13.3"}, {"q": "Can they suspend our access?", "side": "both", "a": "Yes &mdash; for an undisputed invoice more than 30 days overdue, for a security threat, or for a material breach of the acceptable use policy. Suspension for non-payment needs <b>10 days' prior written notice</b>.", "ref": "cl. 6.6, 5.3"}, {"q": "What counts as downtime?", "side": "both", "a": "Unavailability of the production service, measured monthly. <b>Scheduled maintenance is excluded</b>, as is anything caused by your systems, your network or a force majeure event. Maintenance windows need 5 business days' notice.", "ref": "cl. 8.1, sch. 2"}, {"q": "How do we claim service credits?", "side": "customer", "a": "In writing within <b>30 days</b> of the end of the affected month. Claim late and you lose it. Credits are applied to the next invoice and are not refundable in cash.", "ref": "cl. 8.3"}, {"q": "Can we add users mid-term?", "side": "customer", "a": "Yes, at any time. Additional named users are billed quarterly in arrears at the same per-user rate, and the baseline resets at renewal. Named users may be reassigned but not shared.", "ref": "cl. 6.3, 4.3"}, {"q": "Can we reduce the number of users?", "side": "customer", "a": "Only at renewal, and the reduction cannot exceed <b>10% of the baseline</b>. Mid-term reductions do not reduce the fee.", "ref": "cl. 6.4"}, {"q": "Who owns the data and the analytics output?", "side": "both", "a": "You own your data and the reports generated from it. Lumen owns the platform and anything it develops. It may use <b>aggregated, de-identified</b> usage statistics to improve the service.", "ref": "cl. 7.1, 7.3"}, {"q": "What about feedback we give them?", "side": "customer", "a": "Any feedback or suggestions you give becomes Lumen's to use freely, with no obligation and no compensation. This is worth knowing before your team files detailed feature requests.", "ref": "cl. 7.4"}, {"q": "Can we audit their security?", "side": "customer", "a": "Not directly. You are entitled to their annual <b>SOC 2 Type II</b> report and to complete a security questionnaire once a year. An on-site audit is available only after a confirmed security incident.", "ref": "cl. 9.3, 9.4"}, {"q": "What happens if there is a data breach?", "side": "both", "a": "Lumen must notify you <b>without undue delay and within 48 hours</b> of becoming aware, provide the information you need for your own reporting obligations, and bear the cost of its own remediation. Liability for a breach is <b>not capped</b>.", "ref": "cl. 10.4, 11.3"}, {"q": "Can we assign this to a group company?", "side": "customer", "a": "Yes, to an affiliate on written notice. Any other assignment needs consent. Either party may assign to a successor on a merger or sale of substantially all assets without consent.", "ref": "cl. 16.1"}, {"q": "Can they change the price mid-term?", "side": "customer", "a": "No. The fee is fixed for the initial term. Increases apply only from a renewal date, capped at <b>7%</b>, on 60 days' notice.", "ref": "cl. 6.5"}, {"q": "What if they discontinue the product?", "side": "customer", "a": "Lumen may withdraw the service on <b>12 months' notice</b>, and must refund fees paid for any unused period. There is no obligation to keep it running beyond that.", "ref": "cl. 2.5"}, {"q": "Is there any exclusivity or non-compete?", "side": "both", "a": "No. You may run competing tools, and Lumen may serve your competitors. There is no restriction on either side.", "ref": "cl. 2.6"}, {"q": "What law applies and where do disputes go?", "side": "both", "a": "<b>Singapore law</b>, with arbitration under the SIAC Rules seated in Singapore before a sole arbitrator. Note this differs from your usual Indian-law position.", "ref": "cl. 18.1, 18.2"}, {"q": "Do they have to give us support?", "side": "customer", "a": "Yes &mdash; 24x5 for severity 1 and 2 issues with a 1-hour response target for severity 1. Support is included in the subscription fee; professional services are not.", "ref": "sch. 3"}, {"q": "Can we use it for other group companies?", "side": "customer", "a": "Yes, affiliates may use the service under your subscription provided their users count towards the named-user baseline and you remain responsible for their compliance.", "ref": "cl. 4.5"}, {"q": "What survives if the agreement ends?", "side": "both", "a": "Confidentiality for 5 years, the data export and deletion obligations, accrued payment rights, the IP provisions, the liability cap and the dispute clause.", "ref": "cl. 13.5"}], "clauses": [{"ref": "cl. 1.1", "heading": "Definitions and interpretation", "text": "In this Agreement, “Affiliate” means an entity controlling, controlled by or under common control with a party; “Customer Data” means all data uploaded to or generated within the Service by or on behalf of the Customer, including personal data relating to its personnel; “Documentation” means the user and administrator guides published by Lumen; “Named User” means an individual authorised by the Customer to access the Service under a unique credential; “Order Form” means a document signed by both parties recording the commercial terms; and “Service” means the Lumen Workforce Cloud platform."}, {"ref": "cl. 1.2", "heading": "Definitions and interpretation", "text": "In the event of conflict, the order of precedence is: (a) the Order Form; (b) the Data Processing Addendum; (c) the body of this Agreement; (d) the Schedules. No term in any purchase order or administrative document of the Customer shall vary this Agreement."}, {"ref": "cl. 2.1", "heading": "The Service", "text": "Lumen grants the Customer a non-exclusive, non-transferable right for its Named Users to access and use the Service during the Term in accordance with this Agreement and the Documentation."}, {"ref": "cl. 2.2", "heading": "The Service", "text": "Lumen shall provide the Service with reasonable skill and care and in accordance with the service levels in Schedule 2 and the support terms in Schedule 3."}, {"ref": "cl. 2.3", "heading": "The Service", "text": "The Customer shall not reverse engineer, decompile, resell, sub-licence or make the Service available to any third party other than as permitted by clause 4.5, nor use it to build a competing product."}, {"ref": "cl. 2.4", "heading": "The Service", "text": "Lumen may update, modify or enhance the Service from time to time, provided that no update shall materially degrade the functionality or performance of the Service during the then-current Term. Lumen shall give the Customer not less than five (5) business days' notice of any change that requires action by the Customer's administrator."}, {"ref": "cl. 2.5", "heading": "The Service", "text": "Lumen may withdraw the Service or any material part of it on not less than twelve (12) months' written notice, in which case it shall refund a pro rata portion of any fees paid in respect of the unexpired period."}, {"ref": "cl. 2.6", "heading": "The Service", "text": "Nothing in this Agreement restricts either party from contracting with any third party, including a competitor of the other. The arrangement is non-exclusive in both directions."}, {"ref": "cl. 3.1", "heading": "Term and renewal", "text": "This Agreement commences on 1 July 2026 and continues for an initial term of twenty-four (24) months, expiring on 30 June 2028 (the “Initial Term”)."}, {"ref": "cl. 3.2", "heading": "Term and renewal", "text": "On expiry of the Initial Term, and of each renewal term, this Agreement shall renew automatically for successive periods of twelve (12) months unless either party gives not less than sixty (60) days' written notice before the end of the then-current term."}, {"ref": "cl. 4.1", "heading": "Customer obligations", "text": "The Customer shall use the Service in accordance with the Documentation and the acceptable use policy in Schedule 4."}, {"ref": "cl. 4.2", "heading": "Customer obligations", "text": "The Customer shall nominate an administrator, who shall manage Named User provisioning and shall be Lumen's point of contact for operational matters."}, {"ref": "cl. 4.3", "heading": "Customer obligations", "text": "Each Named User credential is personal to one individual and shall not be shared. A credential may be reassigned to a replacement individual where the original user leaves the Customer's employment or changes role."}, {"ref": "cl. 4.4", "heading": "Customer obligations", "text": "The Customer is responsible for the acts and omissions of its Named Users as if they were its own, and shall notify Lumen promptly of any unauthorised access or suspected misuse of the Service."}, {"ref": "cl. 4.5", "heading": "Customer obligations", "text": "Affiliates of the Customer may use the Service under this Agreement, provided that their users count towards the Named User baseline and the Customer remains responsible for their compliance with this Agreement."}, {"ref": "cl. 5.1", "heading": "Suspension", "text": "Lumen may suspend access to the Service, in whole or in part, where continued access presents a material security risk to the Service or to other customers."}, {"ref": "cl. 5.2", "heading": "Suspension", "text": "Lumen may suspend access where the Customer commits a material breach of the acceptable use policy and fails to remedy it within five (5) business days of notice."}, {"ref": "cl. 5.3", "heading": "Suspension", "text": "Lumen may suspend access for non-payment of an undisputed invoice which is more than thirty (30) days overdue, having first given ten (10) days' written notice of its intention to do so. Suspension does not relieve the Customer of the obligation to pay."}, {"ref": "cl. 6.1", "heading": "Fees and payment", "text": "The subscription fee is ₹86,40,000 (Rupees eighty-six lakh forty thousand) per annum for a baseline of one thousand two hundred (1,200) Named Users, invoiced annually in advance. The Customer shall pay each undisputed invoice within thirty (30) days of receipt."}, {"ref": "cl. 6.2", "heading": "Fees and payment", "text": "All fees are exclusive of goods and services tax and of any withholding required by law, which shall be dealt with in accordance with the applicable double taxation treaty."}, {"ref": "cl. 6.3", "heading": "Fees and payment", "text": "Named Users in excess of the baseline shall be billed quarterly in arrears at the same per-user rate. Lumen shall provide a true-up statement within fifteen (15) days of each quarter end."}, {"ref": "cl. 6.4", "heading": "Fees and payment", "text": "The Customer may reduce the Named User baseline with effect from a renewal date only, and by not more than ten per cent (10%) of the then-current baseline. A reduction in actual usage during a term does not reduce the fee."}, {"ref": "cl. 6.5", "heading": "Fees and payment", "text": "The subscription fee is fixed for the Initial Term. Lumen may increase the fee with effect from any renewal date by not more than seven per cent (7%), on not less than sixty (60) days' written notice before the renewal date."}, {"ref": "cl. 6.6", "heading": "Fees and payment", "text": "Interest shall accrue on undisputed sums not paid when due at one per cent (1%) per month or the maximum rate permitted by law, whichever is lower."}, {"ref": "cl. 7.1", "heading": "Intellectual property", "text": "As between the parties, the Customer owns all right, title and interest in Customer Data and in the reports and analytical output generated from it through the Service."}, {"ref": "cl. 7.2", "heading": "Intellectual property", "text": "Lumen owns all right, title and interest in the Service, the Documentation and all software, models and know-how underlying them, and in any improvement to them however arising."}, {"ref": "cl. 7.3", "heading": "Intellectual property", "text": "Lumen may collect and use aggregated and de-identified usage statistics derived from the operation of the Service, provided that such statistics do not identify the Customer, any Affiliate or any individual."}, {"ref": "cl. 7.4", "heading": "Intellectual property", "text": "Where the Customer or any of its users provides feedback, suggestions or feature requests, Lumen may use and exploit them without restriction, obligation of confidence, attribution or compensation."}, {"ref": "cl. 7.5", "heading": "Intellectual property", "text": "Lumen shall indemnify the Customer against any claim that the Service infringes a third party's intellectual property rights, provided the Customer notifies Lumen promptly, grants control of the defence and does not admit liability."}, {"ref": "cl. 8.1", "heading": "Service levels", "text": "Lumen shall make the production Service available for not less than 99.5% of each calendar month, measured in accordance with Schedule 2. Scheduled maintenance notified in accordance with Schedule 2, and unavailability caused by the Customer's systems, the Customer's network or a force majeure event, are excluded from the measurement."}, {"ref": "cl. 8.2", "heading": "Service levels", "text": "Where availability falls below the target in any month, the Customer shall be entitled to a service credit calculated in accordance with Schedule 2, subject to an aggregate cap of fifteen per cent (15%) of the fee attributable to that month."}, {"ref": "cl. 8.3", "heading": "Service levels", "text": "Service credits must be claimed in writing within thirty (30) days of the end of the affected month, failing which the entitlement lapses. Credits are applied against the next invoice and are not refundable in cash."}, {"ref": "cl. 8.4", "heading": "Service levels", "text": "Service credits are the Customer's sole financial remedy for failure to meet the availability target, save where the failure amounts to a material breach entitling the Customer to terminate under clause 12.3."}, {"ref": "cl. 9.1", "heading": "Security and assurance", "text": "Lumen shall maintain an information security programme consistent with ISO/IEC 27001 and shall implement the technical and organisational measures described in Schedule 5."}, {"ref": "cl. 9.2", "heading": "Security and assurance", "text": "Lumen shall encrypt Customer Data in transit and at rest, and shall maintain role-based access controls and audit logging."}, {"ref": "cl. 9.3", "heading": "Security and assurance", "text": "The Customer may complete a security questionnaire once in each contract year. An on-site audit of Lumen's facilities may be conducted only following a confirmed security incident affecting Customer Data."}, {"ref": "cl. 9.4", "heading": "Security and assurance", "text": "Lumen shall provide its annual SOC 2 Type II report to the Customer within thirty (30) days of issue, and in any event on or before 30 September in each year."}, {"ref": "cl. 10.1", "heading": "Data protection", "text": "In respect of personal data contained in Customer Data, the Customer is the Data Fiduciary and Lumen is a Data Processor. Lumen shall process such personal data only on the Customer's documented instructions and in accordance with the Digital Personal Data Protection Act, 2023 and the Data Processing Addendum."}, {"ref": "cl. 10.2", "heading": "Data protection", "text": "Customer Data is hosted in Lumen's Singapore region. Lumen's engineering personnel in Bengaluru, India may access Customer Data for support and maintenance purposes. Lumen shall not transfer Customer Data to any other jurisdiction without the Customer's prior written consent."}, {"ref": "cl. 10.3", "heading": "Data protection", "text": "Lumen shall not engage any sub-processor in respect of Customer Data without the Customer's prior written consent, and shall impose on each approved sub-processor obligations no less protective than those in the Data Processing Addendum."}, {"ref": "cl. 10.4", "heading": "Data protection", "text": "Lumen shall notify the Customer without undue delay, and in any event within forty-eight (48) hours, of becoming aware of any personal data breach affecting Customer Data, and shall provide such information and assistance as the Customer reasonably requires to discharge its own obligations under applicable law."}, {"ref": "cl. 10.5", "heading": "Data protection", "text": "Lumen shall assist the Customer in responding to requests from Data Principals and from the Data Protection Board of India, at no additional charge where the request arises from Lumen's processing."}, {"ref": "cl. 11.1", "heading": "Limitation of liability", "text": "Subject to clauses 11.2 and 11.3, each party's total aggregate liability arising out of or in connection with this Agreement shall not exceed the fees paid or payable in the twelve (12) months immediately preceding the event giving rise to the claim."}, {"ref": "cl. 11.2", "heading": "Limitation of liability", "text": "Neither party shall be liable for indirect or consequential loss, or for loss of profit, revenue, anticipated savings or goodwill, whether direct or indirect."}, {"ref": "cl. 11.3", "heading": "Limitation of liability", "text": "Nothing in this Agreement limits liability for death or personal injury caused by negligence, for fraud, for breach of clause 10 (Data protection), for breach of confidence, for infringement of the other party's intellectual property rights, or for the Customer's obligation to pay the fees."}, {"ref": "cl. 12.1", "heading": "Termination", "text": "Neither party may terminate this Agreement for convenience during the Initial Term. After the Initial Term, either party may terminate with effect from a renewal date by giving notice in accordance with clause 3.2."}, {"ref": "cl. 12.2", "heading": "Termination", "text": "Either party may terminate immediately on written notice if the other becomes insolvent, enters liquidation or judicial management, or is the subject of an order admitting an application under the Insolvency and Bankruptcy Code, 2016 or any equivalent Singapore legislation."}, {"ref": "cl. 12.3", "heading": "Termination", "text": "Either party may terminate immediately on written notice if the other commits a material breach which is capable of remedy and fails to remedy it within thirty (30) days of written notice, or commits a material breach not capable of remedy."}, {"ref": "cl. 12.4", "heading": "Termination", "text": "The Customer may terminate without penalty under clause 17.3 where a change to the standard terms materially and adversely affects it."}, {"ref": "cl. 13.1", "heading": "Consequences of termination", "text": "On termination or expiry, the Customer's right to access the Service ceases immediately, save as provided in clause 13.2."}, {"ref": "cl. 13.2", "heading": "Consequences of termination", "text": "Lumen shall make Customer Data available for export in a documented, machine-readable format for a period of sixty (60) days after the effective date of termination, at no additional charge."}, {"ref": "cl. 13.3", "heading": "Consequences of termination", "text": "At the end of that period Lumen shall delete all Customer Data within thirty (30) days and shall certify the deletion in writing, save for copies required to be retained by law or held in routine backup, which shall remain subject to clause 14."}, {"ref": "cl. 13.4", "heading": "Consequences of termination", "text": "Termination shall not affect any right or remedy which accrued before the effective date, nor the Customer's obligation to pay fees for the period up to that date."}, {"ref": "cl. 13.5", "heading": "Consequences of termination", "text": "Clauses 1, 7, 11, 13, 14 (for five (5) years), 16 and 18 survive termination or expiry. The service levels in Schedule 2 and the credit mechanism in clause 8 do not."}, {"ref": "cl. 14.1", "heading": "Confidentiality", "text": "Each party shall keep confidential all information of the other designated as confidential or which would reasonably be regarded as confidential, and shall not disclose it except to personnel and advisers who need to know it for the purposes of this Agreement."}, {"ref": "cl. 14.2", "heading": "Confidentiality", "text": "The obligation does not apply to information which is or becomes public otherwise than by breach, was lawfully held before disclosure, or is required to be disclosed by law or a competent authority, provided that the disclosing party gives such notice as it lawfully may."}, {"ref": "cl. 15.1", "heading": "Force majeure", "text": "Neither party shall be liable for any failure or delay in performance to the extent caused by an event beyond its reasonable control, including act of God, flood, fire, epidemic, war, civil unrest, failure of a public telecommunications network or act of government."}, {"ref": "cl. 15.2", "heading": "Force majeure", "text": "If a force majeure event affecting the Service continues for more than thirty (30) consecutive days, the Customer may terminate on written notice and shall be refunded a pro rata portion of fees paid for the unexpired period."}, {"ref": "cl. 16.1", "heading": "Assignment", "text": "The Customer may assign or novate this Agreement to an Affiliate on written notice to Lumen. Any other assignment or novation requires the other party's prior written consent, not to be unreasonably withheld, save that either party may assign to a successor on a merger, reconstruction or sale of substantially all of its assets without consent."}, {"ref": "cl. 17.1", "heading": "Changes to this Agreement", "text": "No change to the commercial terms, including the fee, the Named User baseline or the Term, shall be effective unless recorded in an Order Form signed by both parties."}, {"ref": "cl. 17.2", "heading": "Changes to this Agreement", "text": "Lumen may amend the standard terms of this Agreement on not less than thirty (30) days' written notice to the Customer, such notice to specify the change and the date from which it takes effect."}, {"ref": "cl. 17.3", "heading": "Changes to this Agreement", "text": "Where an amendment notified under clause 17.2 materially and adversely affects the Customer, the Customer may terminate this Agreement without penalty by notice given within thirty (30) days of the notice of amendment. If the Customer does not give such notice, it shall be deemed to have accepted the amendment."}, {"ref": "cl. 18.1", "heading": "Governing law and disputes", "text": "This Agreement and any dispute arising out of or in connection with it are governed by the laws of Singapore."}, {"ref": "cl. 18.2", "heading": "Governing law and disputes", "text": "Any dispute shall be referred to and finally resolved by arbitration administered by the Singapore International Arbitration Centre under the SIAC Rules in force at the time, before a sole arbitrator, the seat of arbitration being Singapore and the language English."}, {"ref": "cl. 18.3", "heading": "Governing law and disputes", "text": "Nothing in this clause prevents either party from seeking urgent interim relief from a court of competent jurisdiction."}, {"ref": "cl. 19.1", "heading": "Notices", "text": "Notices shall be in writing and sent to the addresses in Schedule 6 by hand, by internationally recognised courier, or by electronic mail to the addresses nominated for that purpose. Notice by electronic mail is effective for all purposes under this Agreement, including notices of breach and termination."}, {"ref": "cl. 19.2", "heading": "Notices", "text": "A notice sent by electronic mail is deemed received on the next business day in the recipient's jurisdiction."}, {"ref": "cl. 20.1", "heading": "General", "text": "This Agreement, together with the Order Form, the Data Processing Addendum and the Schedules, constitutes the entire agreement between the parties and supersedes all prior discussions."}, {"ref": "cl. 20.2", "heading": "General", "text": "Nothing in this Agreement creates a partnership, joint venture or relationship of employer and employee."}, {"ref": "cl. 20.3", "heading": "General", "text": "If any provision is held invalid or unenforceable it shall be severed and the remainder shall continue in full force."}, {"ref": "cl. 20.4", "heading": "General", "text": "A person who is not a party to this Agreement has no right to enforce any of its terms."}, {"ref": "sch. 1", "heading": "The Service", "text": "Lumen Workforce Cloud: headcount and attrition analytics, workforce planning, compensation benchmarking and statutory reporting modules, delivered through a web application and documented REST API.  Included: unlimited report generation, standard integrations with the Customer's human resources information system, and the support described in Schedule 3. Not included: bespoke development, data migration beyond the standard importer, and on-site training, each of which is chargeable as professional services under a separate Order Form."}, {"ref": "sch. 2", "heading": "Service levels", "text": "Availability target: 99.5% of each calendar month, measured as the proportion of five-minute intervals in which the production service responded successfully to Lumen's external monitoring.  Service credits: 2% of the monthly fee for each 0.1 percentage point below target, to an aggregate maximum of 15% of the monthly fee.  Scheduled maintenance: up to four (4) hours per month, outside 07:00 to 21:00 India Standard Time, on not less than five (5) business days' notice. Emergency maintenance may be carried out on shorter notice where required to address a security vulnerability.  Exclusions: unavailability caused by the Customer's systems or network, by the Customer's breach of this Agreement, or by a force majeure event."}, {"ref": "sch. 3", "heading": "Support", "text": "Severity 1 (production unavailable): 24x5 coverage, one (1) hour response target, continuous effort until resolved or a workaround is in place.  Severity 2 (material function impaired): 24x5 coverage, four (4) hour response target.  Severity 3 and 4: business hours, one (1) and three (3) business day response targets respectively.  Support is provided in English through Lumen's ticketing portal and is included in the subscription fee."}, {"ref": "sch. 4", "heading": "Acceptable use policy", "text": "The Customer shall not use the Service to store or transmit unlawful material; to attempt to gain unauthorised access to the Service or to any other customer's data; to conduct penetration testing without Lumen's prior written consent; to share Named User credentials; or to upload special category personal data beyond that necessary for the agreed workforce analytics purposes.  Lumen shall notify the Customer of any suspected breach and, save where immediate suspension is necessary under clause 5.1, shall allow five (5) business days for remedy."}, {"ref": "sch. 5", "heading": "Technical and organisational measures", "text": "Encryption of Customer Data in transit (TLS 1.2 or higher) and at rest (AES-256). Role-based access control with least privilege. Multi-factor authentication for all administrative access. Audit logging retained for twelve (12) months. Annual penetration testing by an independent third party. Documented business continuity and disaster recovery plans, tested annually, with a recovery time objective of four (4) hours and a recovery point objective of one (1) hour. Background verification of personnel with access to Customer Data."}, {"ref": "sch. 6", "heading": "Notice addresses", "text": "For the Customer: The Company Secretary, Trellis Industries Private Limited, Plot 14, Hinjawadi Phase II, Pune 411057, India. Electronic mail: legal@trellis.example.  For Lumen: The Legal Department, Lumen Workforce Analytics Pte. Ltd., 9 Battery Road, #18-01, Singapore 049910. Electronic mail: legal@lumenworkforce.example."}], "escalate": {"to": "legal@trellis.example", "team": "Trellis Legal — Technology"}};</script>
+<script>
+(function () {
+  var D = window.__CONTRACT__;
+
+  // ---- dates -----------------------------------------------------------
+  // Compare date-only values, not timestamps. Parsing "2028-12-31" gives
+  // midnight UTC; a reader in IST comparing that against a UTC "now" sees
+  // the count off by one for most of the Indian day.
+  function today() {
+    var n = new Date();
+    return Date.UTC(n.getFullYear(), n.getMonth(), n.getDate());
+  }
+  function daysTo(iso) {
+    var p = iso.split("-").map(Number);
+    return Math.round((Date.UTC(p[0], p[1] - 1, p[2]) - today()) / 86400000);
+  }
+  function phrase(n) {
+    if (n < 0)   return ["past", n === -1 ? "yesterday" : Math.abs(n) + " days ago"];
+    if (n === 0) return ["soon", "today"];
+    if (n === 1) return ["soon", "tomorrow"];
+    if (n <= 90) return ["soon", "in " + n + " days"];
+    if (n < 365) return ["ok", "in " + Math.round(n / 30) + " months"];
+    var y = n / 365;
+    return ["ok", "in " + (y < 1.5 ? "a year" : Math.round(y) + " years")];
+  }
+  var MONTH = ["Jan","Feb","Mar","Apr","May","Jun",
+               "Jul","Aug","Sep","Oct","Nov","Dec"];
+  function pretty(iso) {
+    var p = iso.split("-");
+    return Number(p[2]) + " " + MONTH[Number(p[1]) - 1] + " " + p[0];
+  }
+
+  var diary = D.dates.slice().sort(function (a, b) {
+    return a.date < b.date ? -1 : 1;
+  });
+  document.getElementById("dates").innerHTML = diary.map(function (d) {
+    var s = phrase(daysTo(d.date));
+    return '<div class="date"><span class="d">' + pretty(d.date) + "</span>" +
+      '<span class="w">' + d.what +
+      (d.note ? "<small>" + d.note + "</small>" : "") + "</span>" +
+      '<span class="countdown ' + s[0] + '">' + s[1] + "</span></div>";
+  }).join("");
+
+  // ---- side ------------------------------------------------------------
+  // This build ships one reading of the document, the customer's. The Q&A
+  // bank still carries a side on every entry, so supplier-side rendering is
+  // a matter of authoring the other half rather than new machinery.
+  var side = "customer";
+
+  // ---- search ----------------------------------------------------------
+  // Plain token AND-matching over the baked-in answers, with a small
+  // synonym map so "get out", "exit" and "cancel" all reach termination.
+  var SYN = {
+    exit:"terminate", cancel:"terminate", quit:"terminate", leave:"terminate",
+    end:"terminate", out:"terminate", notice:"terminate",
+    cost:"price", pay:"price", fee:"price", charge:"price", money:"price",
+    transfer:"assign", novate:"assign", sell:"assign",
+    sue:"liability", damages:"liability", claim:"liability", cap:"liability",
+    gdpr:"data", privacy:"data", personal:"data",
+    renew:"renewal", rollover:"renewal", extend:"renewal"
+  };
+  function norm(s) {
+    return (s || "").toLowerCase().replace(/[^a-z0-9\s]/g, " ")
+      .split(/\s+/).filter(Boolean)
+      .map(function (w) { return SYN[w] || w; });
+  }
+  var STOP = {the:1,a:1,an:1,is:1,are:1,we:1,i:1,can:1,do:1,to:1,of:1,for:1,
+              what:1,who:1,how:1,it:1,this:1,that:1,be:1,our:1,us:1,in:1,on:1};
+
+  var bank = D.qa.map(function (r) {
+    return { r: r, hay: norm(r.q + " " + r.a + " " + (r.ref || "")) };
+  });
+  var clauses = (D.clauses || []).map(function (c) {
+    return { c: c, hay: norm(c.heading + " " + c.text) };
+  });
+
+  function hits(words, hay) {
+    return words.every(function (w) {
+      return hay.some(function (h) { return h.indexOf(w) === 0; });
+    });
+  }
+
+  function card(r) {
+    return '<div class="res"><p class="rq">' + r.q + '</p>' +
+      '<p class="ra">' + r.a + "</p>" +
+      (r.ref ? '<span class="cite">' + r.ref + "</span>" : "") + "</div>";
+  }
+
+  function render(q) {
+    var out = document.getElementById("results");
+    var words = norm(q).filter(function (w) { return !STOP[w] && w.length > 1; });
+    if (!words.length) {
+      out.innerHTML = bank.slice(0, 3).map(function (b) { return card(b.r); }).join("");
+      return;
+    }
+    var found = bank.filter(function (b) {
+      return hits(words, b.hay) &&
+             (b.r.side === "both" || b.r.side === side || !b.r.side);
+    });
+    if (found.length) {
+      out.innerHTML = found.slice(0, 6).map(function (b) { return card(b.r); }).join("");
+      return;
+    }
+    // Nothing in the bank. Fall back to the contract text so the floor is
+    // always "here is the actual clause", never "no results".
+    var inText = clauses.filter(function (c) { return hits(words, c.hay); });
+    if (inText.length) {
+      out.innerHTML = '<p class="hint">No prepared answer. From the contract text:</p>' +
+        inText.slice(0, 4).map(function (c) {
+          return '<div class="res text"><p class="rq">' + c.c.heading + "</p>" +
+            '<p class="ra">' + c.c.text + "</p>" +
+            '<span class="cite">' + c.c.ref + "</span></div>";
+        }).join("");
+      return;
+    }
+    out.innerHTML = '<p class="hint">Nothing on this page answers that. ' +
+      'Send it to ' + D.escalate.team + ' using the button below — ' +
+      'your question travels with the contract reference.</p>';
+  }
+
+  var ask = document.getElementById("ask");
+  ask.addEventListener("input", function () { render(ask.value); });
+  render("");
+
+  // ---- escalation ------------------------------------------------------
+  // The point of this button is not the email, it is the context. A legal
+  // team gets "quick question about the Acme contract?" all day; this
+  // arrives with the reference, the side and the actual question attached.
+  document.getElementById("escalate").addEventListener("click", function (e) {
+    e.preventDefault();
+    var q = ask.value.trim() || "(question)";
+    var body = "Question: " + q + "\n\n" +
+      "Contract: " + D.title + " (" + D.ref + ")\n" +
+      "Parties: " + D.parties.map(function (p) {
+        return p.name + " — " + p.role; }).join("; ") + "\n" +
+      "I am on the " + side + " side.\n" +
+      "Summary: " + location.href + "\n";
+    location.href = "mailto:" + D.escalate.to +
+      "?subject=" + encodeURIComponent(D.ref + " — contract question") +
+      "&body=" + encodeURIComponent(body);
+  });
+
+  // ---- audio -----------------------------------------------------------
+  var au = document.getElementById("au");
+  var btn = document.getElementById("play");
+  if (au && btn) {
+    var wave = document.querySelector(".wave");
+    btn.addEventListener("click", function () {
+      if (au.paused) { au.play(); } else { au.pause(); }
+    });
+    au.addEventListener("play", function () {
+      wave.classList.add("on");
+      btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>';
+    });
+    function stopped() {
+      wave.classList.remove("on");
+      btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+    }
+    au.addEventListener("pause", stopped);
+    au.addEventListener("ended", stopped);
+  }
+})();
+</script>
+</body>
+</html>

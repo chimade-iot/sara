@@ -70,6 +70,32 @@ endpoint. Where that is unavailable the page is generated without the player.
 All contracts in `contracts/` are invented. No real client data is used
 anywhere in this project.
 
+## Two halves, on purpose
+
+`extract.py` reads a contract and fills in the fact sheet. `generate.py`
+renders the fact sheet and can invent nothing.
+
+    contract.pdf  ->  extract.py  ->  contracts/x.json  ->  generate.py  ->  the page
+
+The split is the quality gate. Extraction is probabilistic; rendering is
+deterministic. Because the model's whole output is one short JSON file, a
+lawyer reviews *that* - in about two minutes - before anything is published.
+`extract.py` prints a review sheet and machine-checks what it can: date
+formats, missing citations, an unguessable slug, a spoken brief with no
+symbols in it, and every cited clause number actually existing in the
+document.
+
+No model ships with this. Point it at the endpoint your organisation has
+already approved:
+
+    set SARA_PROVIDER=anthropic     (or openai)
+    set SARA_MODEL=<model name>
+    set SARA_KEY=<your key>
+
+    python extract.py contract.pdf --slug ab12cd34
+    python extract.py contract.pdf --dry-run      # show the prompt, call nothing
+    python extract.py contracts/x.json --check    # validate a sheet, call nothing
+
 ## Publishing
 
 `docs/` is what GitHub Pages serves, so generating and publishing are the

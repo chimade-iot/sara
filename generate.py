@@ -636,6 +636,15 @@ def build(src: Path, product: str, audio: bool) -> None:
     if audio and d.get("brief"):
         has_audio = say(d["brief"], out / "brief.mp3")
 
+    # An mp3 already sitting in the output folder is still a perfectly good
+    # mp3. Deciding the page's audio on "did THIS run synthesise speech"
+    # rather than "is there a file" meant a rebuild on a machine that could
+    # not reach the speech service silently removed the player from a page
+    # whose audio was published and working.
+    if not has_audio and (out / "brief.mp3").exists():
+        has_audio = True
+        print("    kept the brief.mp3 already in the folder")
+
     (out / "index.html").write_text(page(d, product, has_audio), encoding="utf-8")
     (out / "summary.json").write_text(
         json.dumps(d, indent=2, ensure_ascii=False), encoding="utf-8")
