@@ -147,24 +147,28 @@ def qr_png(url: str, out: Path) -> None:
 # ---------------------------------------------------------------- the page
 
 STYLE = """
+/* ---- palette -------------------------------------------------------
+   Every colour on the page resolves to one of these tokens, so changing
+   the brand is this block and nothing else. The dark-mode block below
+   redefines the same names; if you change one, change its pair. */
 :root{
-  --paper:#f4f3ef;--surface:#fff;--surface-2:#f7f6f2;
-  --ink:#16181d;--ink-2:#464c57;--ink-3:#7b828e;
-  --rule:#e2e0d9;--rule-2:#d2cfc6;
-  --accent:#b4651a;--accent-soft:#fdf3e6;
-  --good:#2f6b4f;--good-soft:#eaf3ee;
-  --warn:#9a3412;--warn-soft:#fdeee7;
+  --paper:#f5f6f8;--surface:#fff;--surface-2:#eef0f4;
+  --ink:#0b1b2b;--ink-2:#44536a;--ink-3:#7d8ba0;
+  --rule:#dfe3ea;--rule-2:#c6cdd9;
+  --accent:#0a4d8c;--accent-soft:#eaf1f9;
+  --good:#1f6b4a;--good-soft:#e8f2ed;
+  --warn:#8a3a12;--warn-soft:#fbeee6;
   --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#0f1115;--surface:#161920;--surface-2:#1b1f27;
-  --ink:#f1f2f4;--ink-2:#b8bec9;--ink-3:#848c99;
-  --rule:#262b34;--rule-2:#333944;
-  --accent:#e2922f;--accent-soft:#2a1f12;
-  --good:#6cc49a;--good-soft:#13241c;
-  --warn:#f0916b;--warn-soft:#2a1811;}}
+  --paper:#0a1119;--surface:#101822;--surface-2:#16202c;
+  --ink:#eef2f7;--ink-2:#aebdd0;--ink-3:#7e8da2;
+  --rule:#1e2a38;--rule-2:#2a3747;
+  --accent:#64a9e8;--accent-soft:#0f2133;
+  --good:#5fc49a;--good-soft:#102620;
+  --warn:#eb9a73;--warn-soft:#2a1a12;}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
   font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -181,14 +185,6 @@ h2{font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.16em
   border:1px solid var(--rule-2);border-radius:3px;color:var(--ink-2);background:var(--surface)}
 .chip.live{border-color:var(--good);color:var(--good);background:var(--good-soft)}
 .chip.ref{color:var(--ink-3)}
-.sidebar-row{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin-bottom:1.1rem}
-.seg{display:inline-flex;border:1px solid var(--rule-2);border-radius:4px;overflow:hidden;
-  background:var(--surface)}
-.seg button{font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;
-  text-transform:uppercase;padding:.5rem .85rem;border:0;background:none;
-  color:var(--ink-3);cursor:pointer}
-.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-.sidenote{font-size:.813rem;color:var(--ink-3)}
 .audio{display:flex;align-items:center;gap:.9rem;background:var(--surface);
   border:1px solid var(--rule);border-radius:4px;padding:.9rem 1rem;margin-bottom:1.5rem}
 .playbtn{flex:0 0 auto;width:2.9rem;height:2.9rem;border-radius:50%;background:var(--ink);
@@ -304,19 +300,10 @@ SCRIPT = r"""
   }).join("");
 
   // ---- side ------------------------------------------------------------
+  // This build ships one reading of the document, the customer's. The Q&A
+  // bank still carries a side on every entry, so supplier-side rendering is
+  // a matter of authoring the other half rather than new machinery.
   var side = "customer";
-  var segs = document.querySelectorAll(".seg button");
-  Array.prototype.forEach.call(segs, function (b) {
-    b.addEventListener("click", function () {
-      side = b.getAttribute("data-side");
-      Array.prototype.forEach.call(segs, function (o) {
-        o.setAttribute("aria-pressed", String(o === b));
-      });
-      document.getElementById("sidenote").textContent =
-        "Answers below are written for the " + side + " side.";
-      render(document.getElementById("ask").value);
-    });
-  });
 
   // ---- search ----------------------------------------------------------
   // Plain token AND-matching over the baked-in answers, with a small
@@ -502,18 +489,11 @@ def page(d: dict, product: str, has_audio: bool) -> str:
     <div class="idrow">{''.join(chips)}</div>
   </header>
 
-  <div class="sidebar-row">
-    <div class="seg" role="group" aria-label="Which side are you on">
-      <button type="button" data-side="customer" aria-pressed="true">I'm the customer</button>
-      <button type="button" data-side="supplier" aria-pressed="false">I'm the supplier</button>
-    </div>
-    <span class="sidenote" id="sidenote">Answers below are written for the customer side.</span>
-  </div>
 {audio}
-  <div class="sechead"><h2>Dates that matter</h2><span class="eyebrow">counted from today</span></div>
+  <div class="sechead"><h2>Important dates</h2><span class="eyebrow">counted from today</span></div>
   <div class="dates" id="dates">{diary}</div>
 
-  <div class="sechead"><h2>The five questions</h2><span class="eyebrow">plain language</span></div>
+  <div class="sechead"><h2>Commonly asked questions</h2><span class="eyebrow">plain language</span></div>
   <div class="qa">{cards}</div>
 
   <div class="sechead"><h2>Ask something else</h2>
@@ -527,15 +507,13 @@ def page(d: dict, product: str, has_audio: bool) -> str:
   </div>
 
   <div class="escalate">
-    <p><b>Still not answered?</b> Send it to {esc(d['escalate']['team'])} with the contract
-      reference, your side and the question already attached.</p>
+    <p><b>Still not answered?</b></p>
     <a class="btn" id="escalate" href="#">Ask your legal contact</a>
   </div>
 
   <div class="optional">
-    <p><b>Ask an approved assistant</b> &mdash; not configured. This page calls nothing by
-      default and sends nothing anywhere. Where an organisation already has an approved
-      contract assistant, it is enabled with a single configuration value.</p>
+    <p><b>Ask Factor<i>AI</i></b> &mdash; where an organisation already has an approved
+      contract assistant, an API enabled assistant can be enabled here.</p>
     <button class="btn" type="button" disabled>Not configured</button>
   </div>
 
