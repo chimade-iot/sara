@@ -46,8 +46,16 @@ SITE = ROOT / "docs"
 BASE = "https://chimade-iot.github.io/sara/"
 
 PRODUCT = "Sāra"                 # overridden by --name
-VOICE = "en-IN-PrabhatNeural"     # same family as the bulletin
-RATE = "-4%"                      # --rate=-4%, never --rate -4% (argparse)
+VOICE = "en-IN-NeerjaNeural"      # chosen by ear against the shortlist
+# Indian English matters here beyond preference: it is the one family
+# that says Bhiwandi, Hosur, crore and lakh correctly. Override for a
+# single run with --voice, or per contract with a "voice" key in the
+# record - the Singapore subscription could reasonably differ.
+RATE = "+4%"                      # --rate=+4%, never --rate +4% (argparse)
+# Was -4%, inherited from a news bulletin where a slower read suits
+# headlines. A contract brief is listened to once, by someone who
+# wants the actionable part; the pace was the smaller half of that
+# complaint, but it was real.
 
 
 # ---------------------------------------------------------------- helpers
@@ -65,7 +73,54 @@ def run(cmd: list[str]) -> None:
             f"{cmd[0]} failed ({p.returncode}):\n  " + "\n  ".join(tail))
 
 
-def say(text: str, out: Path) -> bool:
+def normalise_mp3(path: Path) -> str:
+    """
+    Re-encode what the speech service returned into a plain, well-formed MP3.
+
+    edge-tts writes raw MPEG frames with no Xing/Info header. Browsers decode
+    that happily, which is why the page always worked, but VLC and Windows
+    Media Player frequently refuse it or report no duration: without that
+    header there is no declared bitrate, no length and no seek table. This
+    re-encodes in place through ffmpeg, writing the header, and returns a
+    short description for the log. Without ffmpeg the file is left as it is.
+    """
+    if not shutil.which("ffmpeg"):
+        return "not normalised (ffmpeg not found)"
+    tmp = path.with_suffix(".tmp.mp3")
+    p = subprocess.run(
+        ["ffmpeg", "-v", "error", "-y", "-i", str(path),
+         "-codec:a", "libmp3lame", "-b:a", "48k", "-ar", "24000",
+         "-ac", "1", "-write_xing", "1", str(tmp)],
+        capture_output=True, text=True)
+    if p.returncode != 0 or not tmp.exists() or tmp.stat().st_size < 2048:
+        tmp.unlink(missing_ok=True)
+        tail = (p.stderr or "").strip().splitlines()[-2:]
+        return "not normalised (" + "; ".join(tail) + ")"
+    tmp.replace(path)
+    return f"normalised, {path.stat().st_size / 1024:.0f} KB"
+
+
+def probe_mp3(path: Path) -> str:
+    """What a player will see. Empty string if ffprobe cannot read it."""
+    if not shutil.which("ffprobe"):
+        return ""
+    p = subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries",
+         "format=duration,bit_rate:stream=codec_name,sample_rate,channels",
+         "-of", "default=noprint_wrappers=1", str(path)],
+        capture_output=True, text=True)
+    if p.returncode != 0:
+        return "UNREADABLE - no player will open this"
+    f = dict(l.split("=", 1) for l in p.stdout.strip().splitlines() if "=" in l)
+    try:
+        secs = int(float(f.get("duration", 0)))
+    except ValueError:
+        return "UNREADABLE - no duration"
+    return (f"{f.get('codec_name', '?')} {f.get('sample_rate', '?')}Hz "
+            f"{f.get('channels', '?')}ch {secs // 60}:{secs % 60:02d}")
+
+
+def say(text: str, out: Path, voice: str = "") -> bool:
     """
     Speak the brief.
 
@@ -85,7 +140,7 @@ def say(text: str, out: Path) -> bool:
         return False
 
     async def speak() -> None:
-        c = edge_tts.Communicate(text, VOICE, rate=RATE)
+        c = edge_tts.Communicate(text, voice or VOICE, rate=RATE)
         await c.save(str(out))
 
     try:
@@ -103,15 +158,19 @@ def say(text: str, out: Path) -> bool:
 
     print(f"    spoke {len(text)} characters -> {out.name} "
           f"({out.stat().st_size / 1024:.0f} KB)")
+    print(f"      {normalise_mp3(out)}")
+    probe = probe_mp3(out)
+    if probe:
+        print(f"      plays as: {probe}")
     return True
 
 
 def check_audio() -> int:
     """Say one short line and report precisely what happened."""
     import tempfile
-    print(f"voice {VOICE}, rate {RATE}")
+    print(f"voice {VOICE_OVERRIDE or VOICE}, rate {RATE}")
     tmp = Path(tempfile.gettempdir()) / "sara-audio-check.mp3"
-    ok = say("This is a test of the spoken brief.", tmp)
+    ok = say("This is a test of the spoken brief.", tmp, VOICE_OVERRIDE)
     if ok:
         print(f"OK - audio works. Wrote {tmp}")
         tmp.unlink(missing_ok=True)
@@ -456,6 +515,7 @@ def audio_length(mp3: Path) -> str:
 
 
 PUBLIC_DIR: Path | None = None
+VOICE_OVERRIDE = ""
 
 
 def page(d: dict, product: str, has_audio: bool,
@@ -672,7 +732,8 @@ def build(src: Path, product: str, audio: bool) -> None:
 
     has_audio = False
     if audio and d.get("brief"):
-        has_audio = say(d["brief"], out / "brief.mp3")
+        has_audio = say(d["brief"], out / "brief.mp3",
+                        VOICE_OVERRIDE or d.get("voice", ""))
 
     # An mp3 already sitting in the output folder is still a perfectly good
     # mp3. Deciding the page's audio on "did THIS run synthesise speech"
@@ -720,11 +781,32 @@ def main() -> None:
     ap.add_argument("sources", nargs="*", type=Path)
     ap.add_argument("--name", default=PRODUCT, help="product name shown on the page")
     ap.add_argument("--no-audio", action="store_true")
+    ap.add_argument("--voice", default="",
+                    help="override the voice for this run; try_voices.py "
+                         "renders the same passage in several so you can "
+                         "choose. A contract record may also set \"voice\".")
+    ap.add_argument("--fix-audio", action="store_true",
+                    help="repair the mp3s already in docs/ without calling "
+                         "the speech service, and report what a player sees")
     ap.add_argument("--check-audio", action="store_true",
                     help="say one line and report exactly what fails")
     ap.add_argument("--voices", action="store_true",
                     help="list the English voices available")
     a = ap.parse_args()
+
+    global VOICE_OVERRIDE
+    VOICE_OVERRIDE = a.voice
+
+    if a.fix_audio:
+        found = sorted(SITE.glob("*/brief.mp3"))
+        if not found:
+            sys.exit("no brief.mp3 files under docs/")
+        for mp3 in found:
+            print(f"{mp3.parent.name}/{mp3.name}")
+            print(f"   before: {probe_mp3(mp3) or 'ffprobe not found'}")
+            print(f"   {normalise_mp3(mp3)}")
+            print(f"   after:  {probe_mp3(mp3) or 'ffprobe not found'}")
+        sys.exit(0)
 
     if a.check_audio:
         sys.exit(check_audio())

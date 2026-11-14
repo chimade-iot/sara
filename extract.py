@@ -113,9 +113,15 @@ deadlines, renewal dates, certificates due, review dates. Include dates \
 that have already passed; being told something is overdue is the single \
 most useful thing this page does.
 
-9. "brief" is spoken aloud. No numbering, no clause references, no symbols. \
-"one crore twenty four lakh rupees", not "Rs 1,24,00,000". Open by naming \
-the agreement and the parties, close with the next date that matters.
+9. "brief" is spoken aloud, and the listener reached it by scanning the \
+contract, so they already know which document they are holding. Do not \
+open by introducing it. Open with what they must do and when, starting \
+with anything already overdue. Then what it costs and what binds them, \
+then the traps. Name the agreement and its governing law in one closing \
+line, as context rather than preamble. No numbering, no clause references, \
+no symbols: "one crore twenty four lakh rupees", not "Rs 1,24,00,000". \
+Aim for 230 to 280 words. A listener gives you fifteen seconds to be \
+useful, and the start date is not useful.
 
 SCHEMA:
 {schema}

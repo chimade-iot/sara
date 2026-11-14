@@ -72,14 +72,15 @@ em { font-style: italic; }
 .card { flex: 1 1 0; border: 0.8pt solid #aed6e8; background:#f1f9fd;
         border-radius: 2mm; padding: 3.5mm 4mm; display:flex; gap:4mm;
         align-items:center; }
-.card img { width: 23mm; height: 23mm; flex: 0 0 auto; }
+.card img { width: 21mm; height: 21mm; flex: 0 0 auto; }
 .card .t { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
            font-size: 7.6pt; line-height: 1.4; }
 .card .t b { display:block; font-size: 8.4pt; margin-bottom: 1mm;
              font-family: Georgia, serif; }
 .card .t span { display:block; color:#4a5878; }
-.card .t .u { font-family:"Courier New",monospace; font-size: 6.6pt;
-              color:#7d89a3; margin-top: 1.2mm; word-break: break-all; }
+.card .t .u { font-family:"Courier New",monospace; font-size: 6.2pt;
+              color:#7d89a3; margin-top: 1.2mm;
+              white-space: nowrap; text-decoration: none; display:block; }
 .foot { margin-top: 3mm; padding-top: 2mm; border-top: 0.8pt solid #cbe6f1;
         font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 7.4pt; color:#4a5878; line-height:1.5; }
@@ -106,7 +107,9 @@ def main() -> None:
             f'<div class="card"><img src="data:image/png;base64,{b64}" alt="">'
             f'<div class="t"><b>{html.escape(d["title"])}</b>'
             f'<span>{html.escape(d["type"])}</span>'
-            f'<span class="u">{html.escape(url)}</span></div></div>')
+            f'<a class="u" href="{html.escape(url, quote=True)}">'
+            f'{html.escape(url.replace("https://", ""))}</a>'
+            "</div></div>")
 
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <title>Sara - one page</title><style>{CSS}</style></head><body>
